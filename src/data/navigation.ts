@@ -2,6 +2,10 @@ import { NavItem } from '../types';
 
 export const mainNavItems: NavItem[] = [
   {
+    title: 'Products',
+    href: '/products',
+  },
+  {
     title: 'Features',
     href: '#features',
     children: [
@@ -51,11 +55,11 @@ export const mainNavItems: NavItem[] = [
   },
   {
     title: 'About',
-    href: '#about',
+    href: '/about',
   },
   {
     title: 'Contact',
-    href: '#contact',
+    href: '/contact',
   },
 ];
 
@@ -63,9 +67,9 @@ export const footerNavItems = [
   {
     title: 'Company',
     items: [
-      { title: 'About Us', href: '#about' },
+      { title: 'About Us', href: '/about' },
       { title: 'Implementation', href: '#implementation' },
-      { title: 'Contact', href: '#contact' },
+      { title: 'Contact', href: '/contact' },
       { title: 'Partners', href: '#partners' },
     ],
   },
