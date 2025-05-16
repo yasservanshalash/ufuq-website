@@ -1,0 +1,26 @@
+import React, { useEffect } from 'react';
+import HeroSection from '../sections/HeroSection';
+import FeaturesSection from '../sections/FeaturesSection';
+import TestimonialsSection from '../sections/TestimonialsSection';
+import IndustrySolutions from '../sections/IndustrySolutions';
+import ContactSection from '../sections/ContactSection';
+import CtaSection from '../sections/CtaSection';
+
+const HomePage: React.FC = () => {
+  useEffect(() => {
+    document.title = 'Ufuq ERP | Enterprise Solutions';
+  }, []);
+
+  return (
+    <>
+      <HeroSection />
+      <FeaturesSection />
+      <IndustrySolutions />
+      <TestimonialsSection />
+      <ContactSection />
+      <CtaSection />
+    </>
+  );
+};
+
+export default HomePage;
