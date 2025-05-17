@@ -45,6 +45,7 @@ const IndustrySolutions: React.FC = () => {
         'Billing & Insurance'
       ],
       image: 'https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+<<<<<<< HEAD
     },
     {
       title: 'Trading and Distribution',
@@ -105,6 +106,8 @@ const IndustrySolutions: React.FC = () => {
         'Multi-store Operations'
       ],
       image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+=======
+>>>>>>> origin/main
     }
   ];
 

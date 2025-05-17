@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -146,6 +147,8 @@ html[dir="rtl"] .group:hover .group-hover\:translate-x-1 {
   }
 }
 
+=======
+>>>>>>> origin/main
 @layer base {
   html {
     scroll-behavior: smooth;

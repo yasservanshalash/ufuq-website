@@ -2,6 +2,7 @@ import React from 'react';
 import Section from '../components/ui/Section';
 import TeamCard from '../components/ui/TeamCard';
 import { teamMembers } from '../data/team';
+<<<<<<< HEAD
 import { useLocalization } from '../hooks/useLocalization';
 
 const TeamSection: React.FC = () => {
@@ -12,6 +13,15 @@ const TeamSection: React.FC = () => {
       id="about"
       title={t('about.team.title')}
       subtitle={t('about.team.subtitle')}
+=======
+
+const TeamSection: React.FC = () => {
+  return (
+    <Section
+      id="about"
+      title="Meet Our Leadership Team"
+      subtitle="Experts dedicated to revolutionizing enterprise resource planning"
+>>>>>>> origin/main
       centered
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
