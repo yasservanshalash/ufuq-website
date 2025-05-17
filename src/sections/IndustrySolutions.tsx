@@ -45,6 +45,66 @@ const IndustrySolutions: React.FC = () => {
         'Billing & Insurance'
       ],
       image: 'https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    },
+    {
+      title: 'Trading and Distribution',
+      features: [
+        'Inventory Management',
+        'Point of Sale',
+        'Customer Loyalty',
+        'Multi-store Operations'
+      ],
+      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    },
+    {
+      title: 'Hospitality and Restaurants',
+      features: [
+        'Inventory Management',
+        'Point of Sale',
+        'Customer Loyalty',
+        'Multi-store Operations'
+      ],
+      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    },
+    {
+      title: 'Automotive and Workshop Services',
+      features: [
+        'Inventory Management',
+        'Point of Sale',
+        'Customer Loyalty',
+        'Multi-store Operations'
+      ],
+      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    },
+    {
+      title: 'Real Estate and Property Management',
+      features: [
+        'Inventory Management',
+        'Point of Sale',
+        'Customer Loyalty',
+        'Multi-store Operations'
+      ],
+      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    },
+    {
+      title: 'Logistics and Transportation',
+      features: [
+        'Inventory Management',
+        'Point of Sale',
+        'Customer Loyalty',
+        'Multi-store Operations'
+      ],
+      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+    },
+    {
+      title: 'Financial Services',
+      features: [
+        'Inventory Management',
+        'Point of Sale',
+        'Customer Loyalty',
+        'Multi-store Operations'
+      ],
+      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
     }
   ];
 

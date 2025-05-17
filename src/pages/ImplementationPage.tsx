@@ -1,0 +1,167 @@
+import React, { useEffect } from 'react';
+import Section from '../components/ui/Section';
+import { Card } from '../components/ui/Card';
+import { 
+  SearchIcon, 
+  Lightbulb, 
+  Code, 
+  TestTube, 
+  Upload, 
+  HeartPulse 
+} from 'lucide-react';
+import { useLocalization } from '../hooks/useLocalization';
+
+const ImplementationPage: React.FC = () => {
+  const { t } = useLocalization();
+
+  useEffect(() => {
+    document.title = 'Implementation | Ufuq ERP';
+  }, []);
+
+  const implementationStages = [
+    {
+      id: 'discovery',
+      icon: SearchIcon,
+      title: 'Discovery & Planning',
+      description: 'This stage focuses on analyzing organizational needs and defining project goals.'
+    },
+    {
+      id: 'design',
+      icon: Lightbulb,
+      title: 'Design',
+      description: 'Defines the system\'s architecture, modules, and interface based on planning requirements.'
+    },
+    {
+      id: 'development',
+      icon: Code,
+      title: 'Development',
+      description: 'The ERP system is built, customized, and integrated, including coding and database setup.'
+    },
+    {
+      id: 'testing',
+      icon: TestTube,
+      title: 'Testing',
+      description: 'Extensive testing ensures the system works as intended, covering all key functions.'
+    },
+    {
+      id: 'deployment',
+      icon: Upload,
+      title: 'Deployment',
+      description: 'Deployment includes system installation, data migration, and user training for a smooth transition.'
+    },
+    {
+      id: 'support',
+      icon: HeartPulse,
+      title: 'Support & Updates',
+      description: 'Ongoing support includes issue resolution, user assistance, and regular updates to meet evolving needs.'
+    }
+  ];
+
+  return (
+    <>
+      <Section className="bg-[#DCD6C9] pt-32">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#A6292E] mb-4">Implementation Process</h1>
+          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+            Our comprehensive approach ensures a successful ERP implementation tailored to your business needs
+          </p>
+        </div>
+      </Section>
+
+      <Section className="bg-white">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-[#A6292E] mb-4">Bcor ERP Implementation Stages</h2>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            Our proven implementation methodology ensures a successful transition to your new ERP system
+          </p>
+        </div>
+        
+        <div className="flex flex-col items-center">
+          <div className="w-full max-w-4xl">
+            <div className="relative">
+              {/* Vertical timeline line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#A6292E]"></div>
+              
+              {/* Implementation stages */}
+              {implementationStages.map((stage, index) => (
+                <div 
+                  key={stage.id} 
+                  className={`relative z-10 flex items-center mb-16 ${
+                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  }`}
+                >
+                  {/* Timeline dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-[#A6292E] rounded-full flex items-center justify-center">
+                    <div className="w-4 h-4 bg-white rounded-full"></div>
+                  </div>
+                  
+                  {/* Empty space for alignment */}
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12' : 'pl-12'}`}>
+                    {index % 2 === 0 ? (
+                      <Card className="p-6 hover:shadow-lg transition-all duration-300">
+                        <div className="flex items-start">
+                          <div className="mr-4 p-3 bg-[#f7a3a3] rounded-lg text-[#A6292E]">
+                            <stage.icon size={24} />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-semibold text-[#A6292E] mb-2">{stage.title}</h3>
+                            <p className="text-gray-700">{stage.description}</p>
+                          </div>
+                        </div>
+                      </Card>
+                    ) : null}
+                  </div>
+                  
+                  {/* Empty space for alignment */}
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pl-12' : 'pr-12'}`}>
+                    {index % 2 === 1 ? (
+                      <Card className="p-6 hover:shadow-lg transition-all duration-300">
+                        <div className="flex items-start">
+                          <div className="mr-4 p-3 bg-[#f7a3a3] rounded-lg text-[#A6292E]">
+                            <stage.icon size={24} />
+                          </div>
+                          <div>
+                            <h3 className="text-xl font-semibold text-[#A6292E] mb-2">{stage.title}</h3>
+                            <p className="text-gray-700">{stage.description}</p>
+                          </div>
+                        </div>
+                      </Card>
+                    ) : null}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="bg-slate-50">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-[#A6292E] mb-4">Our Implementation Approach</h2>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            We prioritize your business needs and ensure a smooth transition with minimal disruption
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <Card className="p-6 hover:shadow-lg transition-all duration-300">
+            <h3 className="text-xl font-semibold text-[#A6292E] mb-3">Tailored Solutions</h3>
+            <p className="text-gray-700">Every implementation is customized to your specific business requirements and industry needs.</p>
+          </Card>
+          
+          <Card className="p-6 hover:shadow-lg transition-all duration-300">
+            <h3 className="text-xl font-semibold text-[#A6292E] mb-3">Expert Guidance</h3>
+            <p className="text-gray-700">Our experienced team provides continuous support throughout the entire implementation journey.</p>
+          </Card>
+          
+          <Card className="p-6 hover:shadow-lg transition-all duration-300">
+            <h3 className="text-xl font-semibold text-[#A6292E] mb-3">Minimal Disruption</h3>
+            <p className="text-gray-700">We ensure your business operations continue smoothly during the transition to the new system.</p>
+          </Card>
+        </div>
+      </Section>
+    </>
+  );
+};
+
+export default ImplementationPage; 

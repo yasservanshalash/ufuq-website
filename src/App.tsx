@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
+import ImplementationPage from './pages/ImplementationPage';
 import { LocalizationProvider } from './hooks/useLocalization';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/products" element={<ProductsPage />} />
+              <Route path="/implementation" element={<ImplementationPage />} />
             </Routes>
           </main>
           <Footer />

@@ -10,7 +10,7 @@ const FeaturesSection: React.FC = () => {
 
   return (
     <Section 
-      id="features"
+      id="modules"
       title={t('features.title')}
       subtitle={t('features.subtitle')}
       centered

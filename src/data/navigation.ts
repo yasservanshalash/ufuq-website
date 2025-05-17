@@ -8,50 +8,50 @@ export const mainNavItems: NavItem[] = [
   {
     title: 'Modules',
     href: '#modules',
-    children: [
-      {
-        title: 'Finance',
-        href: '#finance',
-      },
-      {
-        title: 'Trading',
-        href: '#trading',
-      },
-      {
-        title: 'Inventory',
-        href: '#inventory',
-      },
-      {
-        title: 'HRM',
-        href: '#hrm',
-      },
-    ],
+    // children: [
+    //   {
+    //     title: 'Finance',
+    //     href: '#finance',
+    //   },
+    //   {
+    //     title: 'Trading',
+    //     href: '#trading',
+    //   },
+    //   {
+    //     title: 'Inventory',
+    //     href: '#inventory',
+    //   },
+    //   {
+    //     title: 'HRM',
+    //     href: '#hrm',
+    //   },
+    // ],
   },
   {
     title: 'Industries',
     href: '#industries',
-    children: [
-      {
-        title: 'Retail & POS',
-        href: '#retail',
-      },
-      {
-        title: 'Manufacturing',
-        href: '#manufacturing',
-      },
-      {
-        title: 'Construction',
-        href: '#construction',
-      },
-      {
-        title: 'Healthcare',
-        href: '#healthcare',
-      },
-    ],
+    // children: [
+    //   {
+    //     title: 'Retail & POS',
+    //     href: '#retail',
+    //   },
+    //   {
+    //     title: 'Manufacturing',
+    //     href: '#manufacturing',
+    //   },
+    //   {
+    //     title: 'Construction',
+    //     href: '#construction',
+    //   },
+    //   {
+    //     title: 'Healthcare',
+    //     href: '#healthcare',
+    //   },
+    // ],
   },
   {
     title: 'Implementation',
-    href: '#implementation',
+    href: '/implementation',
   },
   {
     title: 'About',
@@ -65,7 +65,7 @@ export const footerNavItems = [
     title: 'Company',
     items: [
       { title: 'About Us', href: '/about' },
-      { title: 'Implementation', href: '#implementation' },
+      { title: 'Implementation', href: '/implementation' },
       { title: 'Contact', href: '/contact' },
       { title: 'Partners', href: '#partners' },
     ],

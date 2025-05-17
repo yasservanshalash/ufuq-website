@@ -29,6 +29,26 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Check for hash in URL when component mounts or location changes
+  useEffect(() => {
+    // Get the hash from the URL (e.g., #modules)
+    const hash = location.hash.replace('#', '');
+    
+    // If there's a hash and it's not empty, scroll to that section
+    if (hash) {
+      // Small timeout to ensure the DOM is fully loaded
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else if (location.pathname !== '/') {
+      // Scroll to top when navigating to other pages
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
+
   const toggleDropdown = (title: string) => {
     if (activeDropdown === title) {
       setActiveDropdown(null);
@@ -38,6 +58,34 @@ const Header: React.FC = () => {
   };
 
   const isHomePage = location.pathname === '/';
+
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      setIsMobileMenuOpen(false);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const navigateToSectionFromAnyPage = (sectionId: string) => {
+    setIsMobileMenuOpen(false);
+    
+    // If already on home page, just scroll to the section
+    if (location.pathname === '/') {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page with the section hash
+      window.location.href = `/#${sectionId}`;
+    }
+  };
+
+  const scrollToTop = () => {
+    setIsMobileMenuOpen(false);
+    window.scrollTo(0, 0);
+  };
 
   const getTranslatedNavItems = () => {
     return mainNavItems.map(item => ({
@@ -109,14 +157,35 @@ const Header: React.FC = () => {
                     <ChevronDown size={16} className="mx-1" />
                   </button>
                 ) : (
-                  <Link
-                    to={item.href}
-                    className={`font-medium ${
-                      isScrolled || !isHomePage ? 'text-slate-800' : 'text-[#A6292E]'
-                    } hover:text-primary-700 transition-colors`}
-                  >
-                    {item.title}
-                  </Link>
+                  item.title === t('nav.modules') ? (
+                    <button
+                      onClick={() => navigateToSectionFromAnyPage('modules')}
+                      className={`font-medium ${
+                        isScrolled || !isHomePage ? 'text-slate-800' : 'text-[#A6292E]'
+                      } hover:text-primary-700 transition-colors`}
+                    >
+                      {item.title}
+                    </button>
+                  ) : item.title === t('nav.industries') ? (
+                    <button
+                      onClick={() => navigateToSectionFromAnyPage('industries')}
+                      className={`font-medium ${
+                        isScrolled || !isHomePage ? 'text-slate-800' : 'text-[#A6292E]'
+                      } hover:text-primary-700 transition-colors`}
+                    >
+                      {item.title}
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`font-medium ${
+                        isScrolled || !isHomePage ? 'text-slate-800' : 'text-[#A6292E]'
+                      } hover:text-primary-700 transition-colors`}
+                      onClick={scrollToTop}
+                    >
+                      {item.title}
+                    </Link>
+                  )
                 )}
                 {item.children && (
                   <div className="absolute mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform">
@@ -127,6 +196,7 @@ const Header: React.FC = () => {
                             key={child.title}
                             to={child.href}
                             className="block px-4 py-2 text-sm text-slate-700 hover:bg-slate-100 rounded-md"
+                            onClick={scrollToTop}
                           >
                             {child.title}
                           </Link>
@@ -141,7 +211,7 @@ const Header: React.FC = () => {
 
           <div className="hidden md:flex items-center space-x-4">
             <LanguageToggle className={`${isScrolled || !isHomePage ? 'text-slate-800' : 'text-[#A6292E]'} font-semibold`} />
-            <Link to="/contact">
+            <Link to="/contact" onClick={scrollToTop}>
               <Button variant="outline" className={isScrolled || !isHomePage ? '' : 'text-[#A6292E] border-black hover:bg-white/10 hover:text-white'}>
                 {t('button.contactUs')}
               </Button>
@@ -180,13 +250,32 @@ const Header: React.FC = () => {
                       />
                     </button>
                   ) : (
-                    <Link
-                      to={item.href}
-                      className="block py-2 font-medium text-slate-800 hover:text-primary-700"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {item.title}
-                    </Link>
+                    item.title === t('nav.modules') ? (
+                      <button
+                        onClick={() => navigateToSectionFromAnyPage('modules')}
+                        className="block py-2 font-medium text-slate-800 hover:text-primary-700 w-full text-left"
+                      >
+                        {item.title}
+                      </button>
+                    ) : item.title === t('nav.industries') ? (
+                      <button
+                        onClick={() => navigateToSectionFromAnyPage('industries')}
+                        className="block py-2 font-medium text-slate-800 hover:text-primary-700 w-full text-left"
+                      >
+                        {item.title}
+                      </button>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        className="block py-2 font-medium text-slate-800 hover:text-primary-700"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          scrollToTop();
+                        }}
+                      >
+                        {item.title}
+                      </Link>
+                    )
                   )}
                   {item.children && activeDropdown === item.title && (
                     <div className="mt-1 border-slate-200 pl-4 border-l-2">
@@ -195,7 +284,10 @@ const Header: React.FC = () => {
                           key={child.title}
                           to={child.href}
                           className="block py-2 text-sm text-slate-700 hover:text-primary-700"
-                          onClick={() => setIsMobileMenuOpen(false)}
+                          onClick={() => {
+                            setIsMobileMenuOpen(false);
+                            scrollToTop();
+                          }}
                         >
                           {child.title}
                         </Link>
@@ -207,7 +299,10 @@ const Header: React.FC = () => {
             </nav>
             <div className="mt-4 flex flex-col space-y-2">
               <LanguageToggle className="mb-2 w-full" />
-              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+              <Link to="/contact" onClick={() => {
+                setIsMobileMenuOpen(false);
+                scrollToTop();
+              }}>
                 <Button variant="outline" className="w-full">
                   {t('button.contactUs')}
                 </Button>
