@@ -7,10 +7,13 @@ import {
   Code, 
   TestTube, 
   Upload, 
-  HeartPulse 
+  HeartPulse,
+  Settings,
+  UserCheck,
+  BarChart3 
 } from 'lucide-react';
 import { useLocalization } from '../hooks/useLocalization';
-
+import img from '../sadu.png'
 const ImplementationPage: React.FC = () => {
   const { t } = useLocalization();
 
@@ -59,10 +62,18 @@ const ImplementationPage: React.FC = () => {
 
   return (
     <>
-      <Section className="bg-[#DCD6C9] pt-32">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#A6292E] mb-4">Implementation Process</h1>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+      <Section className="pt-32 relative">
+        <div className="absolute inset-0 z-0 overflow-hidden border-b-4 border-[#A6292E]">
+          <img 
+            src={img} 
+            alt="Sadu Pattern" 
+            className="w-full h-full object-cover scale-110 transform-origin-center"
+          />
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#DCD6C9] mb-4 mt-6">Implementation Process</h1>
+          <p className="text-xl text-white max-w-2xl mx-auto">
             Our comprehensive approach ensures a successful ERP implementation tailored to your business needs
           </p>
         </div>
@@ -100,7 +111,7 @@ const ImplementationPage: React.FC = () => {
                     {index % 2 === 0 ? (
                       <Card className="p-6 hover:shadow-lg transition-all duration-300">
                         <div className="flex items-start">
-                          <div className="mr-4 p-3 bg-[#f7a3a3] rounded-lg text-[#A6292E]">
+                          <div className="mr-4 p-3 rounded-lg text-[#A6292E]">
                             <stage.icon size={24} />
                           </div>
                           <div>
@@ -117,7 +128,7 @@ const ImplementationPage: React.FC = () => {
                     {index % 2 === 1 ? (
                       <Card className="p-6 hover:shadow-lg transition-all duration-300">
                         <div className="flex items-start">
-                          <div className="mr-4 p-3 bg-[#f7a3a3] rounded-lg text-[#A6292E]">
+                          <div className="mr-4 p-3 rounded-lg text-[#A6292E]">
                             <stage.icon size={24} />
                           </div>
                           <div>
@@ -145,16 +156,31 @@ const ImplementationPage: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <Card className="p-6 hover:shadow-lg transition-all duration-300">
+            <div className="flex mb-4">
+              <div className="p-3 rounded-lg text-[#A6292E]">
+                <Settings size={24} />
+              </div>
+            </div>
             <h3 className="text-xl font-semibold text-[#A6292E] mb-3">Tailored Solutions</h3>
             <p className="text-gray-700">Every implementation is customized to your specific business requirements and industry needs.</p>
           </Card>
           
           <Card className="p-6 hover:shadow-lg transition-all duration-300">
+            <div className="flex mb-4">
+              <div className="p-3 rounded-lg text-[#A6292E]">
+                <UserCheck size={24} />
+              </div>
+            </div>
             <h3 className="text-xl font-semibold text-[#A6292E] mb-3">Expert Guidance</h3>
             <p className="text-gray-700">Our experienced team provides continuous support throughout the entire implementation journey.</p>
           </Card>
           
           <Card className="p-6 hover:shadow-lg transition-all duration-300">
+            <div className="flex mb-4">
+              <div className="p-3 rounded-lg text-[#A6292E]">
+                <BarChart3 size={24} />
+              </div>
+            </div>
             <h3 className="text-xl font-semibold text-[#A6292E] mb-3">Minimal Disruption</h3>
             <p className="text-gray-700">We ensure your business operations continue smoothly during the transition to the new system.</p>
           </Card>

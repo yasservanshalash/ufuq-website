@@ -7,6 +7,7 @@ import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
 import ImplementationPage from './pages/ImplementationPage';
+import WhatsAppButton from './components/ui/WhatsAppButton';
 import { LocalizationProvider } from './hooks/useLocalization';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             </Routes>
           </main>
           <Footer />
+          <WhatsAppButton />
         </div>
       </Router>
     </LocalizationProvider>

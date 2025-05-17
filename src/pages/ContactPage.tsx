@@ -4,6 +4,7 @@ import { Card } from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { MessageCircle, Mail, Phone, MapPin, Clock, Globe } from 'lucide-react';
 import { useLocalization } from '../hooks/useLocalization';
+import img from '../sadu.png';
 
 const ContactPage: React.FC = () => {
   const { t } = useLocalization();
@@ -14,10 +15,18 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-      <Section className="bg-[#DCD6C9] pt-32">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#A6292E] mb-4">{t('contact.title')}</h1>
-          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+      <Section className="pt-32 relative">
+        <div className="absolute inset-0 z-0 overflow-hidden border-b-4 border-[#A6292E]">
+          <img 
+            src={img} 
+            alt="Sadu Pattern" 
+            className="w-full h-full object-cover scale-110 transform-origin-center"
+          />
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+        </div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#DCD6C9] mb-4 mt-6">{t('contact.title')}</h1>
+          <p className="text-xl text-white max-w-2xl mx-auto">
             {t('contact.subtitle')}
           </p>
         </div>
