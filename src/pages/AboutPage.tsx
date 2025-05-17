@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Section from '../components/ui/Section';
 import TeamSection from '../sections/TeamSection';
 import { Card } from '../components/ui/Card';
-import { Award, Target, Users, Clock, Lightbulb, Star, Handshake } from 'lucide-react';
+import { Award, Target, Users, Clock, Lightbulb, Star, Handshake, Zap, Share2, Lock } from 'lucide-react';
 import { useLocalization } from '../hooks/useLocalization';
 import img from '../sadu.png';
 import logo from '../logo_final-3.png';
@@ -46,8 +46,14 @@ const AboutPage: React.FC = () => {
             <p className="text-lg text-gray-700 mb-6">
               {t('about.story.paragraph1')}
             </p>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 mb-6">
               {t('about.story.paragraph2')}
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
+              {t('about.story.paragraph3')}
+            </p>
+            <p className="text-lg text-gray-700">
+              {t('about.story.paragraph4')}
             </p>
           </div>
           <div>
@@ -57,81 +63,83 @@ const AboutPage: React.FC = () => {
       </Section>
 
       {/* <TeamSection /> */}
-      <div className='flex'>
-      <Section className="bg-slate-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#A6292E] mb-6">{t('about.vision.title')}</h2>
-          <p className="text-lg text-gray-700 mb-8">
-            {t('about.vision.description')}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-6">
-              <div className="flex mb-4">
-                <div className="p-3 rounded-lg text-[#A6292E]">
-                  <Lightbulb size={24} />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <Section className="bg-slate-50">
+          <div className="h-full flex flex-col">
+            <h2 className="text-3xl font-bold text-[#A6292E] mb-6">{t('about.vision.title')}</h2>
+            <p className="text-lg text-gray-700 mb-8">
+              {t('about.vision.description')}
+            </p>
+            <div className="grid grid-cols-1 gap-6 flex-grow">
+              <Card className="p-6 h-full">
+                <div className="flex mb-4">
+                  <div className="p-3 rounded-lg text-[#A6292E]">
+                    <Lightbulb size={24} />
+                  </div>
                 </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{t('about.values.innovation')}</h3>
-              <p className="text-gray-600">{t('about.values.innovation.desc')}</p>
-            </Card>
-            <Card className="p-6">
-              <div className="flex mb-4">
-                <div className="p-3 rounded-lg text-[#A6292E]">
-                  <Star size={24} />
+                <h3 className="text-xl font-semibold mb-3">{t('about.values.innovation')}</h3>
+                <p className="text-gray-600">{t('about.values.innovation.desc')}</p>
+              </Card>
+              <Card className="p-6 h-full">
+                <div className="flex mb-4">
+                  <div className="p-3 rounded-lg text-[#A6292E]">
+                    <Star size={24} />
+                  </div>
                 </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{t('about.values.excellence')}</h3>
-              <p className="text-gray-600">{t('about.values.excellence.desc')}</p>
-            </Card>
-            <Card className="p-6">
-              <div className="flex mb-4">
-                <div className="p-3 rounded-lg text-[#A6292E]">
-                  <Handshake size={24} />
+                <h3 className="text-xl font-semibold mb-3">{t('about.values.excellence')}</h3>
+                <p className="text-gray-600">{t('about.values.excellence.desc')}</p>
+              </Card>
+              <Card className="p-6 h-full">
+                <div className="flex mb-4">
+                  <div className="p-3 rounded-lg text-[#A6292E]">
+                    <Handshake size={24} />
+                  </div>
                 </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{t('about.values.partnership')}</h3>
-              <p className="text-gray-600">{t('about.values.partnership.desc')}</p>
-            </Card>
+                <h3 className="text-xl font-semibold mb-3">{t('about.values.partnership')}</h3>
+                <p className="text-gray-600">{t('about.values.partnership.desc')}</p>
+              </Card>
+            </div>
           </div>
-        </div>
-      </Section>
-            <Section className="bg-slate-50">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-[#A6292E] mb-6">{t('about.vision.title')}</h2>
-          <p className="text-lg text-gray-700 mb-8">
-            {t('about.vision.description')}
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-6">
-              <div className="flex mb-4">
-                <div className="p-3 rounded-lg text-[#A6292E]">
-                  <Lightbulb size={24} />
+        </Section>
+
+        <Section className="bg-slate-50">
+          <div className="h-full flex flex-col">
+            <h2 className="text-3xl font-bold text-[#A6292E] mb-6">{t('about.mission.title')}</h2>
+            <p className="text-lg text-gray-700 mb-8">
+              {t('about.mission.description')}
+            </p>
+            <br />
+            <div className="grid grid-cols-1 gap-6 flex-grow mt-1">
+              <Card className="p-6 h-full">
+                <div className="flex mb-4">
+                  <div className="p-3 rounded-lg text-[#A6292E]">
+                    <Zap size={24} />
+                  </div>
                 </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{t('about.values.innovation')}</h3>
-              <p className="text-gray-600">{t('about.values.innovation.desc')}</p>
-            </Card>
-            <Card className="p-6">
-              <div className="flex mb-4">
-                <div className="p-3 rounded-lg text-[#A6292E]">
-                  <Star size={24} />
+                <h3 className="text-xl font-semibold mb-3">{t('about.mission.empowerment')}</h3>
+                <p className="text-gray-600">{t('about.mission.empowerment.desc')}</p>
+              </Card>
+              <Card className="p-6 h-full">
+                <div className="flex mb-4">
+                  <div className="p-3 rounded-lg text-[#A6292E]">
+                    <Share2 size={24} />
+                  </div>
                 </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{t('about.values.excellence')}</h3>
-              <p className="text-gray-600">{t('about.values.excellence.desc')}</p>
-            </Card>
-            <Card className="p-6">
-              <div className="flex mb-4">
-                <div className="p-3 rounded-lg text-[#A6292E]">
-                  <Handshake size={24} />
+                <h3 className="text-xl font-semibold mb-3">{t('about.mission.integration')}</h3>
+                <p className="text-gray-600">{t('about.mission.integration.desc')}</p>
+              </Card>
+              <Card className="p-6 h-full">
+                <div className="flex mb-4">
+                  <div className="p-3 rounded-lg text-[#A6292E]">
+                    <Lock size={24} />
+                  </div>
                 </div>
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{t('about.values.partnership')}</h3>
-              <p className="text-gray-600">{t('about.values.partnership.desc')}</p>
-            </Card>
+                <h3 className="text-xl font-semibold mb-3">{t('about.mission.accessibility')}</h3>
+                <p className="text-gray-600">{t('about.mission.accessibility.desc')}</p>
+              </Card>
+            </div>
           </div>
-        </div>
-      </Section>
+        </Section>
       </div>
     </>
   );
