@@ -6,28 +6,6 @@ export const mainNavItems: NavItem[] = [
     href: '/products',
   },
   {
-<<<<<<< HEAD
-    title: 'Modules',
-    href: '#modules',
-    // children: [
-    //   {
-    //     title: 'Finance',
-    //     href: '#finance',
-    //   },
-    //   {
-    //     title: 'Trading',
-    //     href: '#trading',
-    //   },
-    //   {
-    //     title: 'Inventory',
-    //     href: '#inventory',
-    //   },
-    //   {
-    //     title: 'HRM',
-    //     href: '#hrm',
-    //   },
-    // ],
-=======
     title: 'Features',
     href: '#features',
     children: [
@@ -48,35 +26,10 @@ export const mainNavItems: NavItem[] = [
         href: '#hrm',
       },
     ],
->>>>>>> origin/main
   },
   {
     title: 'Industries',
     href: '#industries',
-<<<<<<< HEAD
-    // children: [
-    //   {
-    //     title: 'Retail & POS',
-    //     href: '#retail',
-    //   },
-    //   {
-    //     title: 'Manufacturing',
-    //     href: '#manufacturing',
-    //   },
-    //   {
-    //     title: 'Construction',
-    //     href: '#construction',
-    //   },
-    //   {
-    //     title: 'Healthcare',
-    //     href: '#healthcare',
-    //   },
-    // ],
-  },
-  {
-    title: 'Implementation',
-    href: '/implementation',
-=======
     children: [
       {
         title: 'Retail & POS',
@@ -99,20 +52,15 @@ export const mainNavItems: NavItem[] = [
   {
     title: 'Implementation',
     href: '#implementation',
->>>>>>> origin/main
   },
   {
     title: 'About',
     href: '/about',
   },
-<<<<<<< HEAD
-
-=======
   {
     title: 'Contact',
     href: '/contact',
   },
->>>>>>> origin/main
 ];
 
 export const footerNavItems = [
@@ -120,11 +68,7 @@ export const footerNavItems = [
     title: 'Company',
     items: [
       { title: 'About Us', href: '/about' },
-<<<<<<< HEAD
-      { title: 'Implementation', href: '/implementation' },
-=======
       { title: 'Implementation', href: '#implementation' },
->>>>>>> origin/main
       { title: 'Contact', href: '/contact' },
       { title: 'Partners', href: '#partners' },
     ],

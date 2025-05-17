@@ -6,30 +6,6 @@ import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
-<<<<<<< HEAD
-import ImplementationPage from './pages/ImplementationPage';
-import { LocalizationProvider } from './hooks/useLocalization';
-
-function App() {
-  return (
-    <LocalizationProvider>
-      <Router>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/products" element={<ProductsPage />} />
-              <Route path="/implementation" element={<ImplementationPage />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </LocalizationProvider>
-=======
 
 function App() {
   return (
@@ -47,7 +23,6 @@ function App() {
         <Footer />
       </div>
     </Router>
->>>>>>> origin/main
   );
 }
 
