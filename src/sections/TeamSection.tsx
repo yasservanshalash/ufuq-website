@@ -2,13 +2,16 @@ import React from 'react';
 import Section from '../components/ui/Section';
 import TeamCard from '../components/ui/TeamCard';
 import { teamMembers } from '../data/team';
+import { useLocalization } from '../hooks/useLocalization';
 
 const TeamSection: React.FC = () => {
+  const { t } = useLocalization();
+  
   return (
     <Section
       id="about"
-      title="Meet Our Leadership Team"
-      subtitle="Experts dedicated to revolutionizing enterprise resource planning"
+      title={t('about.team.title')}
+      subtitle={t('about.team.subtitle')}
       centered
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

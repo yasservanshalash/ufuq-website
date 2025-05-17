@@ -6,12 +6,15 @@ import { ChevronDown, Menu, X } from 'lucide-react';
 import { mainNavItems } from '../../data/navigation';
 import logo from '../../logo.svg.png';
 import logoMobile from '../../logo-mobile.png';
+import LanguageToggle from '../ui/LanguageToggle';
+import { useLocalization } from '../../hooks/useLocalization';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
+  const { t, isRTL } = useLocalization();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +38,19 @@ const Header: React.FC = () => {
   };
 
   const isHomePage = location.pathname === '/';
+
+  const getTranslatedNavItems = () => {
+    return mainNavItems.map(item => ({
+      ...item,
+      title: t(`nav.${item.title.toLowerCase()}`),
+      children: item.children ? item.children.map(child => ({
+        ...child,
+        title: t(`nav.${item.title.toLowerCase()}.${child.title.toLowerCase().replace(/\s+&\s+/g, '').replace(/\s+/g, '')}`)
+      })) : undefined
+    }));
+  };
+
+  const translatedNavItems = getTranslatedNavItems();
 
   return (
     <header
@@ -67,7 +83,7 @@ const Header: React.FC = () => {
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            {mainNavItems.map((item) => (
+            {translatedNavItems.map((item) => (
               <div key={item.title} className="relative group">
                 {item.children ? (
                   <button
@@ -77,7 +93,7 @@ const Header: React.FC = () => {
                     onClick={() => toggleDropdown(item.title)}
                   >
                     {item.title}
-                    <ChevronDown size={16} className="ml-1" />
+                    <ChevronDown size={16} className="mx-1" />
                   </button>
                 ) : (
                   <Link
@@ -90,7 +106,7 @@ const Header: React.FC = () => {
                   </Link>
                 )}
                 {item.children && (
-                  <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left">
+                  <div className="absolute mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform">
                     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                       <div className="p-2">
                         {item.children.map((child) => (
@@ -111,12 +127,13 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageToggle className={`${isScrolled || !isHomePage ? 'text-slate-800' : 'text-[#A6292E]'} font-semibold`} />
             <Link to="/contact">
               <Button variant="outline" className={isScrolled || !isHomePage ? '' : 'text-[#A6292E] border-black hover:bg-white/10 hover:text-white'}>
-                Contact Us
+                {t('button.contactUs')}
               </Button>
             </Link>
-            <Button>Request Demo</Button>
+            <Button>{t('button.requestDemo')}</Button>
           </div>
 
           <button
@@ -134,8 +151,8 @@ const Header: React.FC = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden pt-4 pb-2">
             <nav className="flex flex-col space-y-1">
-              {mainNavItems.map((item) => (
-                <div key={item.title}>
+              {translatedNavItems.map((item) => (
+                <div key={item.title} className="w-full">
                   {item.children ? (
                     <button
                       className="flex items-center justify-between w-full py-2 font-medium text-slate-800 hover:text-primary-700"
@@ -159,7 +176,7 @@ const Header: React.FC = () => {
                     </Link>
                   )}
                   {item.children && activeDropdown === item.title && (
-                    <div className="ml-4 mt-1 border-l-2 border-slate-200 pl-4">
+                    <div className="mt-1 border-slate-200 pl-4 border-l-2">
                       {item.children.map((child) => (
                         <Link
                           key={child.title}
@@ -176,12 +193,13 @@ const Header: React.FC = () => {
               ))}
             </nav>
             <div className="mt-4 flex flex-col space-y-2">
+              <LanguageToggle className="mb-2 w-full" />
               <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button variant="outline" className="w-full">
-                  Contact Us
+                  {t('button.contactUs')}
                 </Button>
               </Link>
-              <Button className="w-full">Request Demo</Button>
+              <Button className="w-full">{t('button.requestDemo')}</Button>
             </div>
           </div>
         )}

@@ -4,9 +4,27 @@ import { footerNavItems } from '../../data/navigation';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import logo from '../../logo.svg.png';
 import logoMobile from '../../logo-mobile.png';
+import { useLocalization } from '../../hooks/useLocalization';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLocalization();
+
+  // Create translated footer navigation items
+  const translatedFooterItems = footerNavItems.map(group => {
+    const groupKey = group.title.toLowerCase();
+    return {
+      ...group,
+      title: t(`footer.${groupKey}`),
+      items: group.items.map(item => {
+        const itemKey = item.title.toLowerCase().replace(/\s+&\s+/g, '').replace(/\s+/g, '');
+        return {
+          ...item,
+          title: t(`footer.${groupKey}.${itemKey}`)
+        };
+      })
+    };
+  });
 
   return (
     <footer className="bg-[#DCD6C9] text-[#A6292E] pt-16 pb-6">
@@ -29,9 +47,7 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-black mb-6 max-w-md">
-              Transforming businesses with integrated enterprise solutions. 
-              We help companies streamline operations and drive growth through 
-              innovative ERP technology.
+              {t('footer.companyDescription')}
             </p>
             <div className="flex items-center space-x-4">
               <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-[#A6292E] text-white hover:bg-primary-800 transition-colors">
@@ -50,7 +66,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Nav Links */}
-          {footerNavItems.map((group, index) => (
+          {translatedFooterItems.map((group, index) => (
             <div key={index}>
               <h3 className="font-semibold text-lg mb-4">{group.title}</h3>
               <ul className="space-y-2">
@@ -76,23 +92,23 @@ const Footer: React.FC = () => {
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#A6292E] text-white mr-3">
                   <Phone size={14} />
                 </div>
-                <span>+1 (555) 123-4567</span>
+                <span>{t('footer.phone')}</span>
               </div>
               <div className="flex items-center text-black">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#A6292E] text-white mr-3">
                   <Mail size={14} />
                 </div>
-                <span>contact@ufuqerp.com</span>
+                <span>{t('footer.email')}</span>
               </div>
               <div className="flex items-center text-black">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#A6292E] text-white mr-3">
                   <MapPin size={14} />
                 </div>
-                <span>1234 Technology Plaza, Suite 500, San Francisco, CA 94107</span>
+                <span>{t('footer.address')}</span>
               </div>
             </div>
             <div className="text-[#A6292E] text-sm">
-              © {currentYear} Ufuq Technologies Inc. All rights reserved.
+              {t('footer.copyright').replace('{year}', currentYear.toString())}
             </div>
           </div>
         </div>

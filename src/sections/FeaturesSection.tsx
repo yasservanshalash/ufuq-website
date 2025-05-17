@@ -1,14 +1,18 @@
 import React from 'react';
 import Section from '../components/ui/Section';
 import FeatureCard from '../components/ui/FeatureCard';
-import { features } from '../data/features';
+import { getFeatures } from '../data/features';
+import { useLocalization } from '../hooks/useLocalization';
 
 const FeaturesSection: React.FC = () => {
+  const { t } = useLocalization();
+  const features = getFeatures();
+
   return (
     <Section 
       id="features"
-      title="Core Modules & Advanced Capabilities"
-      subtitle="Our comprehensive ERP platform offers powerful tools to streamline your business operations"
+      title={t('features.title')}
+      subtitle={t('features.subtitle')}
       centered
       className="bg-slate-50"
     >
