@@ -6,8 +6,8 @@ export const mainNavItems: NavItem[] = [
     href: '/products',
   },
   {
-    title: 'Features',
-    href: '#features',
+    title: 'Modules',
+    href: '#modules',
     children: [
       {
         title: 'Finance',
@@ -57,10 +57,7 @@ export const mainNavItems: NavItem[] = [
     title: 'About',
     href: '/about',
   },
-  {
-    title: 'Contact',
-    href: '/contact',
-  },
+
 ];
 
 export const footerNavItems = [

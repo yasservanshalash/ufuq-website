@@ -43,10 +43,23 @@ const Header: React.FC = () => {
     return mainNavItems.map(item => ({
       ...item,
       title: t(`nav.${item.title.toLowerCase()}`),
-      children: item.children ? item.children.map(child => ({
-        ...child,
-        title: t(`nav.${item.title.toLowerCase()}.${child.title.toLowerCase().replace(/\s+&\s+/g, '').replace(/\s+/g, '')}`)
-      })) : undefined
+      children: item.children ? item.children.map(child => {
+        // Create appropriate translation key - handle special cases
+        let itemKey;
+        
+        if (child.title === 'Retail & POS') {
+          itemKey = 'retail';
+        } else if (child.title === 'Case Studies') {
+          itemKey = 'casestudies';
+        } else {
+          itemKey = child.title.toLowerCase().replace(/\s+/g, '');
+        }
+        
+        return {
+          ...child,
+          title: t(`nav.${item.title.toLowerCase()}.${itemKey}`)
+        };
+      }) : undefined
     }));
   };
 

@@ -17,7 +17,19 @@ const Footer: React.FC = () => {
       ...group,
       title: t(`footer.${groupKey}`),
       items: group.items.map(item => {
-        const itemKey = item.title.toLowerCase().replace(/\s+&\s+/g, '').replace(/\s+/g, '');
+        // Create a standardized key for translation - handle special cases
+        let itemKey;
+        
+        if (item.title === 'Retail & POS') {
+          itemKey = 'retail';
+        } else if (item.title === 'Case Studies') {
+          itemKey = 'casestudies';
+        } else if (item.title === 'About Us') {
+          itemKey = 'aboutus';
+        } else {
+          itemKey = item.title.toLowerCase().replace(/\s+/g, '');
+        }
+        
         return {
           ...item,
           title: t(`footer.${groupKey}.${itemKey}`)

@@ -38,12 +38,32 @@ export const getFeatures = (): FeatureType[] => {
     {
       title: t('features.fixedAssets.title'),
       description: t('features.fixedAssets.description'),
-      icon: 'Building',
+      icon: 'Home',
     },
     {
       title: t('features.automotive.title'),
       description: t('features.automotive.description'),
       icon: 'Car',
+    },
+    {
+      title: t('features.healthcare.title'),
+      description: t('features.healthcare.description'),
+      icon: 'Heart',
+    },
+    {
+      title: t('features.CRM.title'),
+      description: t('features.CRM.description'),
+      icon: 'Handshake',
+    },
+    {
+      title: t('features.property.title'),
+      description: t('features.property.description'),
+      icon: 'Building',
+    },
+    {
+      title: t('features.readyMix.title'),
+      description: t('features.readyMix.description'),
+      icon: 'Graph',
     },
   ];
 };

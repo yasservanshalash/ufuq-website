@@ -15,17 +15,17 @@ const LocalizationContext = createContext<LocalizationContextType | undefined>(u
 const enTranslations: Record<string, string> = {
   // Navigation
   'nav.products': 'Products',
-  'nav.features': 'Features',
+  'nav.modules': 'Modules',
   'nav.industries': 'Industries',
   'nav.implementation': 'Implementation',
   'nav.about': 'About',
   'nav.contact': 'Contact',
   
   // Features submenu
-  'nav.features.finance': 'Finance',
-  'nav.features.trading': 'Trading',
-  'nav.features.inventory': 'Inventory',
-  'nav.features.hrm': 'HRM',
+  'nav.modules.finance': 'Finance',
+  'nav.modules.trading': 'Trading',
+  'nav.modules.inventory': 'Inventory',
+  'nav.modules.hrm': 'HRM',
   
   // Industries submenu
   'nav.industries.retail': 'Retail & POS',
@@ -85,11 +85,18 @@ const enTranslations: Record<string, string> = {
   'features.fixedAssets.description': 'Track and manage asset value precisely with detailed fixed asset management.',
   'features.automotive.title': 'Automotive',
   'features.automotive.description': 'Simplify workshop & repair management with specialized automotive solutions.',
-  
+  'features.healthcare.title': 'Healthcare',
+  'features.healthcare.description': 'Enables small and medium hospitals to enhance patient management, billing, EMR, and overall operational efficiency.',
+  'features.CRM.title': 'CRM',
+  'features.CRM.description': 'Foster strong customer relationships and accelerate business growth with our robust CRM features.',
+  'features.property.title': 'Property',
+  'features.property.description': 'Provides complete management solutions, ensuring smooth control and optimization across all aspects of property management.',
+  'features.readyMix.title': 'Ready Mix',
+  'features.readyMix.description': 'Provides accurate control and optimization in concrete mixing, operations, batch processing, and more.',
   // Footer
   'footer.company': 'Company',
   'footer.solutions': 'Solutions',
-  'footer.features': 'Features',
+  'footer.modules': 'Modules',
   'footer.resources': 'Resources',
   'footer.company.aboutus': 'About Us',
   'footer.company.implementation': 'Implementation',
@@ -99,10 +106,10 @@ const enTranslations: Record<string, string> = {
   'footer.solutions.manufacturing': 'Manufacturing',
   'footer.solutions.healthcare': 'Healthcare',
   'footer.solutions.construction': 'Construction',
-  'footer.features.finance': 'Finance',
-  'footer.features.trading': 'Trading',
-  'footer.features.inventory': 'Inventory',
-  'footer.features.hrm': 'HRM',
+  'footer.modules.finance': 'Finance',
+  'footer.modules.trading': 'Trading',
+  'footer.modules.inventory': 'Inventory',
+  'footer.modules.hrm': 'HRM',
   'footer.resources.documentation': 'Documentation',
   'footer.resources.support': 'Support',
   'footer.resources.blog': 'Blog',
@@ -164,17 +171,17 @@ const enTranslations: Record<string, string> = {
 const arTranslations: Record<string, string> = {
   // Navigation
   'nav.products': 'المنتجات',
-  'nav.features': 'الخصائص',
+  'nav.modules': 'الخصائص',
   'nav.industries': 'الصناعات',
   'nav.implementation': 'التنفيذ',
   'nav.about': 'عن الشركة',
   'nav.contact': 'اتصل بنا',
   
-  // Features submenu
-  'nav.features.finance': 'المالية',
-  'nav.features.trading': 'التداول',
-  'nav.features.inventory': 'المخزون',
-  'nav.features.hrm': 'إدارة الموارد البشرية',
+  // modules submenu
+  'nav.modules.finance': 'المالية',
+  'nav.modules.trading': 'التداول',
+  'nav.modules.inventory': 'المخزون',
+  'nav.modules.hrm': 'إدارة الموارد البشرية',
   
   // Industries submenu
   'nav.industries.retail': 'التجزئة ونقاط البيع',
