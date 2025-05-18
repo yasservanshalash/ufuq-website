@@ -122,7 +122,7 @@ const enTranslations: Record<string, string> = {
   'footer.copyright': '© {year} Ufuq Technologies Inc. All rights reserved.',
   
   // About Page
-  'about.title': 'About Ufuq ERP',
+  'about.title': 'About Us',
   'about.subtitle': 'Transforming businesses through innovative enterprise solutions since 2010.',
   'about.story.title': 'Our Story',
   'about.story.paragraph1': 'Ufuq was founded by Mohammed Adil Odivayalil to bring BCor ERP a reliable, enterprise grade software used by banks, manufacturers, and service providers in Bahrain to small and medium sized businesses across the GCC.',
@@ -295,8 +295,8 @@ const arTranslations: Record<string, string> = {
   'about.story.title': 'قصتنا',
   'about.story.paragraph1': 'تأسست شركة أفق في عام 2010، وكانت في طليعة الابتكار في مجال تخطيط موارد المؤسسات. مهمتنا هي تمكين الشركات بحلول ذكية وقابلة للتوسع تدفع النمو والكفاءة.',
   'about.story.paragraph2': 'ما بدأ كفريق صغير من المطورين المتحمسين نما ليصبح مؤسسة عالمية، تخدم مئات الشركات عبر صناعات متعددة.',
-  'about.story.paragraph3': 'BCor offers integrated modules for finance, HR, inventory, sales, CRM, and more built to streamline operations and help growing businesses stay competitive in a digital first economy.',
-  'about.story.paragraph4': 'At Ufuq, we believe progress doesn\'t have to come at the cost of identity. That\'s why we take pride in blending modern technology with deep respect for the region\'s business values, traditions, and cultural context. From the way we communicate, to how we support our clients we align with the values that matter most.',
+  'about.story.paragraph3': 'يوفر نظام BCor وحدات متكاملة للمالية والموارد البشرية والمخزون والمبيعات وإدارة علاقات العملاء والمزيد، مصممة لتبسيط العمليات ومساعدة الشركات النامية على البقاء تنافسية في اقتصاد رقمي.',
+  'about.story.paragraph4': 'في أفق، نؤمن بأن التقدم لا يجب أن يأتي على حساب الهوية. لهذا نفتخر بدمج التكنولوجيا الحديثة مع احترام عميق لقيم الأعمال والتقاليد والسياق الثقافي للمنطقة. من طريقة تواصلنا، إلى كيفية دعمنا لعملائنا، نحن نتوافق مع القيم التي تهم أكثر.',
   'about.stats.clients': 'العملاء حول العالم',
   'about.stats.experience': 'سنوات من الخبرة',
   'about.stats.awards': 'جوائز الصناعة',

@@ -32,10 +32,10 @@ const AboutPage: React.FC = () => {
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#DCD6C9] mb-4 mt-6">{t('about.title')}</h1>
-          <p className="text-xl text-white max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#DCD6C9] mb-4 mt-8 relative top-4">{t('about.title')}</h1>
+          {/* <p className="text-xl text-white max-w-2xl mx-auto">
             {t('about.subtitle')}
-          </p>
+          </p> */}
         </div>
       </Section>
 

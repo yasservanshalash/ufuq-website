@@ -16,9 +16,15 @@ import {
 } from 'lucide-react';
 import { useLocalization } from '../hooks/useLocalization';
 import img from '../sadu.png';
-
+import imp1 from '../discovery and planning.png';
+import imp2 from '../design.png';
+import imp3 from '../testing.png';
+import imp4 from '../development.png';
+import imp5 from '../support.png';
+import imp6 from '../deployment.png';
+import { is } from '@react-three/fiber/dist/declarations/src/core/utils';
 const ImplementationPage: React.FC = () => {
-  const { t } = useLocalization();
+  const { t, isRTL } = useLocalization();
   const [currentStage, setCurrentStage] = useState(0);
   const stageRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -115,55 +121,72 @@ const ImplementationPage: React.FC = () => {
         <div className="max-w-5xl mx-auto">
           {/* Centered Timeline */}
           <div className="relative">
-            {/* Vertical timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#A6292E]"></div>
+            {/* Vertical timeline line - hidden on mobile, centered on desktop */}
+            <div className="hidden md:block absolute w-1 h-full bg-[#A6292E] z-0" style={{ left: 'calc(50% - 0.5px)' }}></div>
+            
+            {/* Vertical timeline line for mobile - centered in the page */}
+            <div className="md:hidden absolute w-1 h-full bg-[#A6292E] z-0 left-1/2 -ml-0.5"></div>
             
             {/* Implementation stages */}
             {implementationStages.map((stage, index) => (
               <div 
                 key={stage.id} 
                 ref={stageVisibility[index].ref}
-                className={`relative z-10 flex items-center mb-16 last:mb-0 ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                }`}
+                className="relative z-10 flex flex-col md:flex-row items-center gap-4 md:gap-12 mb-16 last:mb-0"
               >
-                {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-[#A6292E] rounded-full flex items-center justify-center">
+                {/* Timeline dot for mobile - visible only on small screens */}
+                <div className="md:hidden w-8 h-8 bg-[#A6292E] rounded-full flex items-center justify-center mb-4">
                   <div className="w-4 h-4 bg-white rounded-full"></div>
                 </div>
                 
-                {/* Empty space for alignment */}
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12' : 'pl-12'}`}>
-                  {index % 2 === 0 ? (
-                    <Card className="p-6 hover:shadow-lg transition-all duration-300">
-                      <div className="flex items-start">
-                        <div className="mr-4 p-3 rounded-lg text-[#A6292E]">
-                          <stage.icon size={24} />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-semibold text-[#A6292E] mb-2">{stage.title}</h3>
-                          <p className="text-gray-700">{stage.description}</p>
-                        </div>
-                      </div>
-                    </Card>
-                  ) : null}
+                {/* Card - full width on mobile, left positioned on desktop */}
+                <div className="w-full md:w-6/12 px-4 md:pr-8 md:relative" style={{ right: isRTL ? '-60px' : '30px' }}>
+                  <Card className="p-6 hover:shadow-lg transition-all duration-300 w-full">
+                    <div>
+                      <h3 className="text-xl font-semibold text-[#A6292E] mb-2 text-center">{stage.title}</h3>
+                      <p className="text-gray-700 text-center">{stage.description}</p>
+                    </div>
+                  </Card>
                 </div>
                 
-                {/* Empty space for alignment */}
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pl-12' : 'pr-12'}`}>
-                  {index % 2 === 1 ? (
-                    <Card className="p-6 hover:shadow-lg transition-all duration-300">
-                      <div className="flex items-start">
-                        <div className="mr-4 p-3 rounded-lg text-[#A6292E]">
-                          <stage.icon size={24} />
-                        </div>
-                        <div>
-                          <h3 className="text-xl font-semibold text-[#A6292E] mb-2">{stage.title}</h3>
-                          <p className="text-gray-700">{stage.description}</p>
-                        </div>
-                      </div>
-                    </Card>
-                  ) : null}
+                {/* Timeline dot for desktop - hidden on small screens */}
+                <div className="hidden md:flex w-1/12 justify-center relative z-20" style={{ right: isRTL ? '-39px' : '37px' }}>
+                  <div className="w-8 h-8 bg-[#A6292E] rounded-full flex items-center justify-center">
+                    <div className="w-4 h-4 bg-white rounded-full"></div>
+                  </div>
+                </div>
+                
+                {/* Icon or image - full width on mobile, right positioned on desktop */}
+                <div className="w-full md:w-5/12 px-4 md:pl-6 flex justify-center md:justify-start mt-4 md:mt-0">
+                  {stage.id === 'discovery' ? (
+                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
+                      <img src={imp1} alt="Discovery Phase" className="w-full h-auto" />
+                    </div>
+                  ) : stage.id === 'design' ? (
+                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
+                      <img src={imp2} alt="Design Phase" className="w-full h-auto" />
+                    </div>
+                  ) : stage.id === 'testing' ? (
+                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
+                    <img src={imp3} alt="Design Phase" className="w-full h-auto" />
+                  </div>
+                  ) : stage.id === 'development' ? (
+                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
+                    <img src={imp4} alt="Design Phase" className="w-full h-auto" />
+                  </div>
+                  ) : stage.id === 'deployment' ? (
+                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
+                    <img src={imp6} alt="Design Phase" className="w-full h-auto" />
+                  </div>
+                  ) : stage.id === 'support' ? (
+                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
+                    <img src={imp5} alt="Design Phase" className="w-full h-auto" />
+                    </div>
+                  ) : (
+                    <div className="p-3 rounded-lg text-[#A6292E] bg-white shadow-md">
+                      <stage.icon size={28} />
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
