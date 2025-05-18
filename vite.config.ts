@@ -7,4 +7,6 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+  assetsInclude: ['**/*.glb'], // Add GLB files to the asset include list
+  publicDir: 'public', // Explicitly set the public directory
 });
