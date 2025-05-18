@@ -36,38 +36,38 @@ const ImplementationPage: React.FC = () => {
     {
       id: 'discovery',
       icon: SearchIcon,
-      title: 'Discovery & Planning',
-      description: 'This stage focuses on analyzing organizational needs and defining project goals.'
+      title: t('implementation.stages.discovery.title'),
+      description: t('implementation.stages.discovery.description')
     },
     {
       id: 'design',
       icon: Lightbulb,
-      title: 'Design',
-      description: 'Defines the system\'s architecture, modules, and interface based on planning requirements.'
+      title: t('implementation.stages.design.title'),
+      description: t('implementation.stages.design.description')
     },
     {
       id: 'development',
       icon: Code,
-      title: 'Development',
-      description: 'The ERP system is built, customized, and integrated, including coding and database setup.'
+      title: t('implementation.stages.development.title'),
+      description: t('implementation.stages.development.description')
     },
     {
       id: 'testing',
       icon: TestTube,
-      title: 'Testing',
-      description: 'Extensive testing ensures the system works as intended, covering all key functions.'
+      title: t('implementation.stages.testing.title'),
+      description: t('implementation.stages.testing.description')
     },
     {
       id: 'deployment',
       icon: Upload,
-      title: 'Deployment',
-      description: 'Deployment includes system installation, data migration, and user training for a smooth transition.'
+      title: t('implementation.stages.deployment.title'),
+      description: t('implementation.stages.deployment.description')
     },
     {
       id: 'support',
       icon: HeartPulse,
-      title: 'Support & Updates',
-      description: 'Ongoing support includes issue resolution, user assistance, and regular updates to meet evolving needs.'
+      title: t('implementation.stages.support.title'),
+      description: t('implementation.stages.support.description')
     }
   ];
 
@@ -103,18 +103,18 @@ const ImplementationPage: React.FC = () => {
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         <div className="relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#DCD6C9] mb-4 mt-6">Implementation Process</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#DCD6C9] mb-4 mt-6">{t('implementation.title')}</h1>
           <p className="text-xl text-white max-w-2xl mx-auto">
-            Our comprehensive approach ensures a successful ERP implementation tailored to your business needs
+            {t('implementation.subtitle')}
           </p>
         </div>
       </Section>
 
       <Section className="bg-white">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-[#A6292E] mb-4">Bcor ERP Implementation Stages</h2>
+          <h2 className="text-3xl font-bold text-[#A6292E] mb-4">{t('implementation.stages.title')}</h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Our proven implementation methodology ensures a successful transition to your new ERP system
+            {t('implementation.stages.subtitle')}
           </p>
         </div>
         
@@ -196,9 +196,9 @@ const ImplementationPage: React.FC = () => {
 
       <Section className="bg-slate-50">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-[#A6292E] mb-4">Our Implementation Approach</h2>
+          <h2 className="text-3xl font-bold text-[#A6292E] mb-4">{t('implementation.approach.title')}</h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            We prioritize your business needs and ensure a smooth transition with minimal disruption
+            {t('implementation.approach.subtitle')}
           </p>
         </div>
         

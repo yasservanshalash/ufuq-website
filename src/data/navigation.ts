@@ -70,31 +70,31 @@ export const footerNavItems = [
       { title: 'Partners', href: '#partners' },
     ],
   },
-  {
-    title: 'Solutions',
-    items: [
-      { title: 'Retail & POS', href: '#retail' },
-      { title: 'Manufacturing', href: '#manufacturing' },
-      { title: 'Healthcare', href: '#healthcare' },
-      { title: 'Construction', href: '#construction' },
-    ],
-  },
-  {
-    title: 'Features',
-    items: [
-      { title: 'Finance', href: '#finance' },
-      { title: 'Trading', href: '#trading' },
-      { title: 'Inventory', href: '#inventory' },
-      { title: 'HRM', href: '#hrm' },
-    ],
-  },
-  {
-    title: 'Resources',
-    items: [
-      { title: 'Documentation', href: '#docs' },
-      { title: 'Support', href: '#support' },
-      { title: 'Blog', href: '#blog' },
-      { title: 'Case Studies', href: '#case-studies' },
-    ],
-  },
+  // {
+  //   title: 'Solutions',
+  //   items: [
+  //     { title: 'Retail & POS', href: '#retail' },
+  //     { title: 'Manufacturing', href: '#manufacturing' },
+  //     { title: 'Healthcare', href: '#healthcare' },
+  //     { title: 'Construction', href: '#construction' },
+  //   ],
+  // },
+  // {
+  //   title: 'Features',
+  //   items: [
+  //     { title: 'Finance', href: '#finance' },
+  //     { title: 'Trading', href: '#trading' },
+  //     { title: 'Inventory', href: '#inventory' },
+  //     { title: 'HRM', href: '#hrm' },
+  //   ],
+  // },
+  // {
+  //   title: 'Resources',
+  //   items: [
+  //     { title: 'Documentation', href: '#docs' },
+  //     { title: 'Support', href: '#support' },
+  //     { title: 'Blog', href: '#blog' },
+  //     { title: 'Case Studies', href: '#case-studies' },
+  //   ],
+  // },
 ];

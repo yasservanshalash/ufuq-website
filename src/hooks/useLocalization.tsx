@@ -180,6 +180,26 @@ const enTranslations: Record<string, string> = {
   'footer.features.trading': 'Trading',
   'footer.features.inventory': 'Inventory',
   'footer.features.hrm': 'HRM',
+  
+  // Implementation Page
+  'implementation.title': 'Implementation Process',
+  'implementation.subtitle': 'Our comprehensive approach ensures a successful ERP implementation tailored to your business needs',
+  'implementation.stages.title': 'Bcor ERP Implementation Stages',
+  'implementation.stages.subtitle': 'Our proven implementation methodology ensures a successful transition to your new ERP system',
+  'implementation.stages.discovery.title': 'Discovery & Planning',
+  'implementation.stages.discovery.description': 'This stage focuses on analyzing organizational needs and defining project goals.',
+  'implementation.stages.design.title': 'Design',
+  'implementation.stages.design.description': 'Defines the system\'s architecture, modules, and interface based on planning requirements.',
+  'implementation.stages.development.title': 'Development',
+  'implementation.stages.development.description': 'The ERP system is built, customized, and integrated, including coding and database setup.',
+  'implementation.stages.testing.title': 'Testing',
+  'implementation.stages.testing.description': 'Extensive testing ensures the system works as intended, covering all key functions.',
+  'implementation.stages.deployment.title': 'Deployment',
+  'implementation.stages.deployment.description': 'Deployment includes system installation, data migration, and user training for a smooth transition.',
+  'implementation.stages.support.title': 'Support & Updates',
+  'implementation.stages.support.description': 'Ongoing support includes issue resolution, user assistance, and regular updates to meet evolving needs.',
+  'implementation.approach.title': 'Our Implementation Approach',
+  'implementation.approach.subtitle': 'We prioritize your business needs and ensure a smooth transition with minimal disruption',
 };
 
 // Arabic translations
@@ -256,6 +276,14 @@ const arTranslations: Record<string, string> = {
   'features.fixedAssets.description': 'تتبع وإدارة قيمة الأصول بدقة مع إدارة مفصلة للأصول الثابتة.',
   'features.automotive.title': 'السيارات',
   'features.automotive.description': 'تبسيط إدارة ورش العمل والإصلاح مع حلول متخصصة للسيارات.',
+  'features.healthcare.title': 'الرعاية الصحية',
+  'features.healthcare.description': 'تمكين المستشفيات الصغيرة والمتوسطة من تعزيز إدارة المرضى والفواتير والسجلات الطبية الإلكترونية والكفاءة التشغيلية العامة.',
+  'features.CRM.title': 'إدارة علاقات العملاء',
+  'features.CRM.description': 'تعزيز علاقات العملاء القوية وتسريع نمو الأعمال من خلال ميزات متينة لإدارة علاقات العملاء.',
+  'features.property.title': 'إدارة العقارات',
+  'features.property.description': 'توفير حلول إدارة كاملة، تضمن التحكم السلس والتحسين عبر جميع جوانب إدارة العقارات.',
+  'features.readyMix.title': 'الخرسانة الجاهزة',
+  'features.readyMix.description': 'توفير تحكم دقيق وتحسين في خلط الخرسانة والعمليات ومعالجة الدفعات والمزيد.',
   
   // Footer
   'footer.company': 'الشركة',
@@ -344,6 +372,26 @@ const arTranslations: Record<string, string> = {
   'contact.demo.button': 'حجز عرض توضيحي',
   'contact.map.title': 'جِدنا',
   'contact.map.subtitle': 'قم بزيارة مكتبنا لمعرفة المزيد عن حلولنا',
+  
+  // Implementation Page
+  'implementation.title': 'عملية التنفيذ',
+  'implementation.subtitle': 'نهجنا الشامل يضمن تنفيذًا ناجحًا لنظام تخطيط موارد المؤسسات مصمم خصيصًا لاحتياجات عملك',
+  'implementation.stages.title': 'مراحل تنفيذ نظام BCor',
+  'implementation.stages.subtitle': 'منهجية التنفيذ المثبتة لدينا تضمن انتقالًا ناجحًا إلى نظام تخطيط موارد المؤسسات الجديد',
+  'implementation.stages.discovery.title': 'الاكتشاف والتخطيط',
+  'implementation.stages.discovery.description': 'تركز هذه المرحلة على تحليل احتياجات المؤسسة وتحديد أهداف المشروع.',
+  'implementation.stages.design.title': 'التصميم',
+  'implementation.stages.design.description': 'تحديد هيكل النظام ووحداته وواجهته بناءً على متطلبات التخطيط.',
+  'implementation.stages.development.title': 'التطوير',
+  'implementation.stages.development.description': 'يتم بناء نظام تخطيط موارد المؤسسات وتخصيصه ودمجه، بما في ذلك البرمجة وإعداد قاعدة البيانات.',
+  'implementation.stages.testing.title': 'الاختبار',
+  'implementation.stages.testing.description': 'الاختبار الشامل يضمن عمل النظام كما هو مقصود، مع تغطية جميع الوظائف الرئيسية.',
+  'implementation.stages.deployment.title': 'النشر',
+  'implementation.stages.deployment.description': 'يشمل النشر تثبيت النظام وترحيل البيانات وتدريب المستخدمين لانتقال سلس.',
+  'implementation.stages.support.title': 'الدعم والتحديثات',
+  'implementation.stages.support.description': 'يشمل الدعم المستمر حل المشكلات ومساعدة المستخدمين والتحديثات المنتظمة لتلبية الاحتياجات المتطورة.',
+  'implementation.approach.title': 'نهج التنفيذ لدينا',
+  'implementation.approach.subtitle': 'نحن نعطي الأولوية لاحتياجات عملك ونضمن انتقالًا سلسًا بأقل قدر من الاضطراب',
 };
 
 interface LocalizationProviderProps {

@@ -63,7 +63,7 @@ export const getFeatures = (): FeatureType[] => {
     {
       title: t('features.readyMix.title'),
       description: t('features.readyMix.description'),
-      icon: 'Graph',
+      icon: 'Construction',
     },
   ];
 };
