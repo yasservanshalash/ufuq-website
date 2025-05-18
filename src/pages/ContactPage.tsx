@@ -15,7 +15,7 @@ const ContactPage: React.FC = () => {
 
   return (
     <>
-      <Section className="pt-32 relative">
+      <Section className="pt-32 relative mt-10">
         <div className="absolute inset-0 z-0 overflow-hidden border-b-4 border-[#A6292E]">
           <img 
             src={img} 

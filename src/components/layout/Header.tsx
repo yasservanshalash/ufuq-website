@@ -120,7 +120,7 @@ const Header: React.FC = () => {
       }`}
     >
       <Container>
-        <div className="flex items-center justify-between relative">
+        <div className="flex items-center justify-between relative p-4">
           <div className="md:w-auto w-1/3">
             <Link to="/">
               <img 
@@ -132,13 +132,13 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:hidden z-10" style={{ marginTop: '30px' }}>
+          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:hidden z-10">
             <Link to="/">
               <img 
                 src={logoMobile} 
                 alt="Ufuq ERP" 
-                className="h-10 transition-transform duration-300" 
-                style={{ transform: isScrolled ? 'scale(1.5)' : 'scale(3)' }}
+                className="h-8 transition-transform duration-300" 
+                style={{ transform: isScrolled ? 'scale(2)' : 'scale(2)' }}
               />
             </Link>
           </div>

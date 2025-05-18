@@ -2,16 +2,52 @@ import React, { useEffect } from 'react';
 import Section from '../components/ui/Section';
 import { Card } from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import { Check, ArrowRight, Scale, HeadphonesIcon, RefreshCw } from 'lucide-react';
+import { Check, ArrowRight, ArrowLeft, Scale, HeadphonesIcon, RefreshCw } from 'lucide-react';
 import img from "../sadu.png"
 import bcorImg from "../bcor.png"
 import { useLocalization } from '../hooks/useLocalization';
+import { useNavigate } from 'react-router-dom';
 
 const ProductsPage: React.FC = () => {
   const { t, isRTL } = useLocalization();
+  const navigate = useNavigate();
+
+  const navigateToHomeModules = () => {
+    navigate('/');
+    // Add a small delay to ensure the navigation completes before scrolling
+    setTimeout(() => {
+      const modulesSection = document.getElementById('modules');
+      if (modulesSection) {
+        modulesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
 
   useEffect(() => {
     document.title = 'Products | Ufuq ERP';
+    
+    // Add smooth scrolling for anchor links
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a');
+      
+      if (anchor && anchor.hash) {
+        e.preventDefault();
+        const targetElement = document.querySelector(anchor.hash);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.getBoundingClientRect().top + window.pageYOffset - 100,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+    
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+    };
   }, []);
 
   const products = [
@@ -24,7 +60,7 @@ const ProductsPage: React.FC = () => {
         t('products.feature.humanResources'),
         t('products.feature.projectManagement'),
         t('products.feature.supplyChain'),
-        t('products.feature.businessIntelligence'),
+        // t('products.feature.businessIntelligence'),
       ],
       image: 'https://us.images.westend61.de/0001876358pw/group-of-middle-eastern-corporate-business-people-wearing-traditional-emirati-clothes-meeting-in-the-office-in-dubai-business-team-working-and-brainstorming-in-the-uae-DMDF02237.jpg'
     }
@@ -32,7 +68,7 @@ const ProductsPage: React.FC = () => {
 
   return (
     <>
-      <Section className="pt-32 relative">
+      <Section className="pt-32 relative mt-10">
         <div className="absolute inset-0 z-0 overflow-hidden border-b-4 border-[#A6292E]">
           <img 
             src={img} 
@@ -57,7 +93,6 @@ const ProductsPage: React.FC = () => {
                 <div className="p-8">
                   <div className="flex items-center">
                     <h2 className="text-3xl font-bold text-[#A6292E] mb-4">{product.name}</h2>
-                    <img src={bcorImg} className="w-[50px] relative bottom-1 mx-2"/>
                   </div>
                   <p className="text-lg text-gray-700 mb-6">{product.description}</p>
                   <ul className="space-y-4 mb-8">
@@ -69,20 +104,19 @@ const ProductsPage: React.FC = () => {
                     ))}
                   </ul>
                   <div className="flex space-x-4">
-                    <Button className="group">
-                      {t('products.modules')}
-                      <ArrowRight className="mx-2 group-hover:translate-x-1 transition-transform" />
+                    <Button className="group" onClick={navigateToHomeModules}>
+                      {isRTL ? 'الخصائص' : 'View All Modules'}
+                      {
+                        isRTL ? <ArrowLeft className="mx-2 group-hover:translate-x-1 transition-transform" /> : <ArrowRight className="mx-2 group-hover:translate-x-1 transition-transform" />
+                      }
                     </Button>
                   </div>
                 </div>
                 <div className="relative h-[400px] lg:h-auto">
                   <img
-                    src={product.image}
+                    src={bcorImg}
                     alt={product.name}
-                    className="absolute inset-0 w-full h-full object-cover"
-                    style={{
-                      transform: isRTL ? 'scaleX(-1)' : 'none'
-                    }}
+                    className="m-auto mt-[50px] inset-0 w-[300px] h-[300px] object-cover"
                   />
                 </div>
               </div>
@@ -91,7 +125,7 @@ const ProductsPage: React.FC = () => {
         ))}
       </Section>
 
-      <Section className="bg-slate-50">
+      <Section className="bg-slate-50" id="modules">
         <div className="text-center">
           <div className="flex justify-center">
             <h2 className="text-3xl font-bold text-[#A6292E] mb-6">{t('products.whyChoose')}</h2>
