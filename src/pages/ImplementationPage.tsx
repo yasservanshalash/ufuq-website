@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Section from '../components/ui/Section';
 import { Card } from '../components/ui/Card';
-import { Scene } from '../components/3d/Scene';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { 
   SearchIcon, 
@@ -23,7 +22,6 @@ import imp4 from '../development.png';
 import imp5 from '../support.png';
 import imp6 from '../deployment.png';
 
-import { is } from '@react-three/fiber/dist/declarations/src/core/utils';
 const ImplementationPage: React.FC = () => {
   const { t, isRTL } = useLocalization();
   const [currentStage, setCurrentStage] = useState(0);
@@ -169,19 +167,19 @@ const ImplementationPage: React.FC = () => {
                     </div>
                   ) : stage.id === 'testing' ? (
                     <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
-                    <img src={imp3} alt="Design Phase" className="w-full h-auto" />
-                  </div>
+                      <img src={imp3} alt="Testing Phase" className="w-full h-auto" />
+                    </div>
                   ) : stage.id === 'development' ? (
                     <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
-                    <img src={imp4} alt="Design Phase" className="w-full h-auto" />
-                  </div>
+                      <img src={imp4} alt="Development Phase" className="w-full h-auto" />
+                    </div>
                   ) : stage.id === 'deployment' ? (
                     <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
-                    <img src={imp6} alt="Design Phase" className="w-full h-auto" />
-                  </div>
+                      <img src={imp6} alt="Deployment Phase" className="w-full h-auto" />
+                    </div>
                   ) : stage.id === 'support' ? (
                     <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
-                    <img src={imp5} alt="Design Phase" className="w-full h-auto" />
+                      <img src={imp5} alt="Support Phase" className="w-full h-auto" />
                     </div>
                   ) : (
                     <div className="p-3 rounded-lg text-[#A6292E] bg-white shadow-md">
