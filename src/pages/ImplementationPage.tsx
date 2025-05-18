@@ -112,45 +112,61 @@ const ImplementationPage: React.FC = () => {
           </p>
         </div>
         
-        <div className="flex flex-col lg:flex-row items-start">
-          {/* 3D Character */}
-          <div className="lg:sticky lg:top-24 w-full lg:w-1/2 h-[400px] mb-8 lg:mb-0">
-            <Scene 
-              currentStage={currentStage} 
-              isVisible={stageVisibility[currentStage]?.isVisible} 
-            />
-          </div>
-
-          {/* Timeline */}
-          <div className="w-full lg:w-1/2">
-            <div className="relative">
-              <div className="absolute left-8 top-0 h-full w-1 bg-[#A6292E]"></div>
-              
-              {implementationStages.map((stage, index) => (
-                <div 
-                  key={stage.id}
-                  ref={stageVisibility[index].ref}
-                  className="relative z-10 mb-16 last:mb-0 ml-16"
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute left-[-32px] w-8 h-8 bg-[#A6292E] rounded-full flex items-center justify-center">
-                    <div className="w-4 h-4 bg-white rounded-full"></div>
-                  </div>
-                  
-                  <Card className="p-6 hover:shadow-lg transition-all duration-300">
-                    <div className="flex items-start">
-                      <div className="mr-4 p-3 rounded-lg text-[#A6292E]">
-                        <stage.icon size={24} />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-semibold text-[#A6292E] mb-2">{stage.title}</h3>
-                        <p className="text-gray-700">{stage.description}</p>
-                      </div>
-                    </div>
-                  </Card>
+        <div className="max-w-5xl mx-auto">
+          {/* Centered Timeline */}
+          <div className="relative">
+            {/* Vertical timeline line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#A6292E]"></div>
+            
+            {/* Implementation stages */}
+            {implementationStages.map((stage, index) => (
+              <div 
+                key={stage.id} 
+                ref={stageVisibility[index].ref}
+                className={`relative z-10 flex items-center mb-16 last:mb-0 ${
+                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                }`}
+              >
+                {/* Timeline dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-[#A6292E] rounded-full flex items-center justify-center">
+                  <div className="w-4 h-4 bg-white rounded-full"></div>
                 </div>
-              ))}
-            </div>
+                
+                {/* Empty space for alignment */}
+                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-12' : 'pl-12'}`}>
+                  {index % 2 === 0 ? (
+                    <Card className="p-6 hover:shadow-lg transition-all duration-300">
+                      <div className="flex items-start">
+                        <div className="mr-4 p-3 rounded-lg text-[#A6292E]">
+                          <stage.icon size={24} />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-semibold text-[#A6292E] mb-2">{stage.title}</h3>
+                          <p className="text-gray-700">{stage.description}</p>
+                        </div>
+                      </div>
+                    </Card>
+                  ) : null}
+                </div>
+                
+                {/* Empty space for alignment */}
+                <div className={`w-1/2 ${index % 2 === 0 ? 'pl-12' : 'pr-12'}`}>
+                  {index % 2 === 1 ? (
+                    <Card className="p-6 hover:shadow-lg transition-all duration-300">
+                      <div className="flex items-start">
+                        <div className="mr-4 p-3 rounded-lg text-[#A6292E]">
+                          <stage.icon size={24} />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-semibold text-[#A6292E] mb-2">{stage.title}</h3>
+                          <p className="text-gray-700">{stage.description}</p>
+                        </div>
+                      </div>
+                    </Card>
+                  ) : null}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </Section>
