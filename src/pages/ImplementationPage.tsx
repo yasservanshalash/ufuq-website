@@ -15,12 +15,12 @@ import {
 } from 'lucide-react';
 import { useLocalization } from '../hooks/useLocalization';
 import img from '../sadu.png';
-import imp1 from '../discovery and planning.png';
-import imp2 from '../design.png';
-import imp3 from '../testing.png';
-import imp4 from '../development.png';
-import imp5 from '../support.png';
-import imp6 from '../deployment.png';
+import imp1 from '/discovery and planning.png';
+import imp2 from '/design.png';
+import imp3 from '/testing.png';
+import imp4 from '/development.png';
+import imp5 from '/support.png';
+import imp6 from '/deployment.png';
 
 const ImplementationPage: React.FC = () => {
   const { t, isRTL } = useLocalization();
