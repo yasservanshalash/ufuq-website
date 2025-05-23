@@ -10,6 +10,8 @@ import LanguageToggle from '../ui/LanguageToggle';
 import { useLocalization } from '../../hooks/useLocalization';
 
 const Header: React.FC = () => {
+  const phoneNumber = '+16479493768';
+  const whatsappUrl = `https://wa.me/${phoneNumber}`;
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -211,12 +213,14 @@ const Header: React.FC = () => {
 
           <div className="hidden md:flex items-center space-x-4">
             <LanguageToggle className={`${isScrolled || !isHomePage ? 'text-slate-800' : 'text-[#A6292E]'} font-semibold`} />
-            <Link to="/contact" onClick={scrollToTop}>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className={isScrolled || !isHomePage ? '' : 'text-[#A6292E] border-black hover:bg-white/10 hover:text-white'}>
                 {t('button.contactUs')}
               </Button>
+            </a>
+            <Link to="/contact">
+              <Button>{t('button.requestDemo')}</Button>
             </Link>
-            <Button>{t('button.requestDemo')}</Button>
           </div>
 
           <button
@@ -299,15 +303,17 @@ const Header: React.FC = () => {
             </nav>
             <div className="mt-4 flex flex-col space-y-2">
               <LanguageToggle className="mb-2 w-full" />
+              <a href={whatsappUrl} onClick={() => setIsMobileMenuOpen(false)}>
+                <Button variant="outline" className="w-full">
+                  {t('button.contactUs')}
+                </Button>
+              </a>
               <Link to="/contact" onClick={() => {
                 setIsMobileMenuOpen(false);
                 scrollToTop();
               }}>
-                <Button variant="outline" className="w-full">
-                  {t('button.contactUs')}
-                </Button>
+                <Button className="w-full">{t('button.requestDemo')}</Button>
               </Link>
-              <Button className="w-full">{t('button.requestDemo')}</Button>
             </div>
           </div>
         )}

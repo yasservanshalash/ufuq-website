@@ -3,9 +3,11 @@ import Section from '../components/ui/Section';
 import TestimonialCard from '../components/ui/TestimonialCard';
 import { testimonials } from '../data/testimonials';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLocalization } from '../hooks/useLocalization';
 
 const TestimonialsSection: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useLocalization();
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
@@ -18,8 +20,8 @@ const TestimonialsSection: React.FC = () => {
   return (
     <Section
       id="testimonials"
-      title="Trusted by Industry Leaders"
-      subtitle="Hear from our clients about their experience with our ERP solutions"
+      title={t('testimonials.title')}
+      subtitle={t('testimonials.subtitle')}
       centered
     >
       {/* Desktop View - Show all testimonials */}

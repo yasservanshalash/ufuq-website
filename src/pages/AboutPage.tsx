@@ -71,7 +71,7 @@ const AboutPage: React.FC = () => {
               {t('about.vision.description')}
             </p>
             <div className="grid grid-cols-1 gap-6 flex-grow">
-              <Card className="p-6 h-full">
+              <Card className="p-6 h-full h-[220px]">
                 <div className="flex mb-4">
                   <div className="p-3 rounded-lg text-[#A6292E]">
                     <Lightbulb size={24} />
@@ -80,7 +80,7 @@ const AboutPage: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-3">{t('about.values.innovation')}</h3>
                 <p className="text-gray-600">{t('about.values.innovation.desc')}</p>
               </Card>
-              <Card className="p-6 h-full">
+              <Card className="p-6 h-full h-[220px]">
                 <div className="flex mb-4">
                   <div className="p-3 rounded-lg text-[#A6292E]">
                     <Star size={24} />
@@ -89,7 +89,7 @@ const AboutPage: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-3">{t('about.values.excellence')}</h3>
                 <p className="text-gray-600">{t('about.values.excellence.desc')}</p>
               </Card>
-              <Card className="p-6 h-full">
+              <Card className="p-6 h-full h-[220px]">
                 <div className="flex mb-4">
                   <div className="p-3 rounded-lg text-[#A6292E]">
                     <Handshake size={24} />
@@ -108,9 +108,8 @@ const AboutPage: React.FC = () => {
             <p className="text-lg text-gray-700 mb-8">
               {t('about.mission.description')}
             </p>
-            <br />
-            <div className="grid grid-cols-1 gap-6 flex-grow mt-1">
-              <Card className="p-6 h-full">
+            <div className="grid grid-cols-1 gap-6 flex-grow">
+              <Card className="p-6 h-full h-[220px]">
                 <div className="flex mb-4">
                   <div className="p-3 rounded-lg text-[#A6292E]">
                     <Zap size={24} />
@@ -119,7 +118,7 @@ const AboutPage: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-3">{t('about.mission.empowerment')}</h3>
                 <p className="text-gray-600">{t('about.mission.empowerment.desc')}</p>
               </Card>
-              <Card className="p-6 h-full">
+              <Card className="p-6 h-full h-[220px]">
                 <div className="flex mb-4">
                   <div className="p-3 rounded-lg text-[#A6292E]">
                     <Share2 size={24} />
@@ -128,7 +127,7 @@ const AboutPage: React.FC = () => {
                 <h3 className="text-xl font-semibold mb-3">{t('about.mission.integration')}</h3>
                 <p className="text-gray-600">{t('about.mission.integration.desc')}</p>
               </Card>
-              <Card className="p-6 h-full">
+              <Card className="p-6 h-full h-[220px]">
                 <div className="flex mb-4">
                   <div className="p-3 rounded-lg text-[#A6292E]">
                     <Lock size={24} />

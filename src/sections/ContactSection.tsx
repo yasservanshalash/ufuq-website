@@ -3,13 +3,16 @@ import Section from '../components/ui/Section';
 import Button from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { MessageCircle, Mail, Phone } from 'lucide-react';
+import { useLocalization } from '../hooks/useLocalization';
 
 const ContactSection: React.FC = () => {
+  const { t } = useLocalization();
+
   return (
     <Section
       id="contact"
-      title="Get In Touch"
-      subtitle="Have questions or ready to transform your business? We're here to help."
+      title={t('getInTouch.title')}
+      subtitle={t('getInTouch.subtitle')}
       centered
       className="bg-slate-50"
     >
@@ -20,12 +23,11 @@ const ContactSection: React.FC = () => {
               <MessageCircle size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Schedule a Demo</h3>
+              <h3 className="text-xl font-semibold mb-2">{t('getInTouch.demo.title')}</h3>
               <p className="text-slate-600 mb-4">
-                See our ERP solution in action. Our team will walk you through 
-                our platform and show how it can address your specific needs.
+                {t('getInTouch.demo.description')}
               </p>
-              <Button variant="outline">Book a Demo</Button>
+              <Button variant="outline">{t('getInTouch.demo.button')}</Button>
             </div>
           </div>
 
@@ -34,9 +36,9 @@ const ContactSection: React.FC = () => {
               <Mail size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+              <h3 className="text-xl font-semibold mb-2">{t('getInTouch.email.title')}</h3>
               <p className="text-slate-600 mb-2">
-                For general inquiries and support:
+                {t('getInTouch.email.description')}
               </p>
               <a href="mailto:info@ufuqerp.com" className="text-[#A6292E] hover:underline">
                 info@ufuqerp.com
@@ -49,9 +51,9 @@ const ContactSection: React.FC = () => {
               <Phone size={24} />
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+              <h3 className="text-xl font-semibold mb-2">{t('getInTouch.call.title')}</h3>
               <p className="text-slate-600 mb-2">
-                Speak directly with our experts:
+                {t('getInTouch.call.description')}
               </p>
               <a href="tel:+15551234567" className="text-[#A6292E] hover:underline">
                 +1 (555) 123-4567
@@ -61,12 +63,12 @@ const ContactSection: React.FC = () => {
         </div>
 
         <Card className="p-6">
-          <h3 className="text-xl font-semibold mb-6">Request Information</h3>
+          <h3 className="text-xl font-semibold mb-6">{t('getInTouch.form.title')}</h3>
           <form className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-1">
-                  First Name
+                  {t('getInTouch.form.firstName')}
                 </label>
                 <input
                   type="text"
@@ -76,7 +78,7 @@ const ContactSection: React.FC = () => {
               </div>
               <div>
                 <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 mb-1">
-                  Last Name
+                  {t('getInTouch.form.lastName')}
                 </label>
                 <input
                   type="text"
@@ -87,7 +89,7 @@ const ContactSection: React.FC = () => {
             </div>
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1">
-                Email
+                {t('getInTouch.form.email')}
               </label>
               <input
                 type="email"
@@ -97,7 +99,7 @@ const ContactSection: React.FC = () => {
             </div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-1">
-                Company
+                {t('getInTouch.form.company')}
               </label>
               <input
                 type="text"
@@ -107,7 +109,7 @@ const ContactSection: React.FC = () => {
             </div>
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-1">
-                Message
+                {t('getInTouch.form.message')}
               </label>
               <textarea
                 id="message"
@@ -115,7 +117,7 @@ const ContactSection: React.FC = () => {
                 className="w-full px-4 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#A6292E] focus:border-transparent"
               ></textarea>
             </div>
-            <Button className="w-full">Submit Request</Button>
+            <Button className="w-full">{t('getInTouch.form.submit')}</Button>
           </form>
         </Card>
       </div>

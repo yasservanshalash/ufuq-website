@@ -5,6 +5,7 @@ import TestimonialsSection from '../sections/TestimonialsSection';
 import IndustrySolutions from '../sections/IndustrySolutions';
 import ContactSection from '../sections/ContactSection';
 import CtaSection from '../sections/CtaSection';
+// import TrustedLeaders from '../sections/TrustedLeaders';
 
 const HomePage: React.FC = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const HomePage: React.FC = () => {
       <HeroSection />
       <FeaturesSection />
       <IndustrySolutions />
+      {/* <TrustedLeaders /> */}
       <TestimonialsSection />
       <ContactSection />
       <CtaSection />

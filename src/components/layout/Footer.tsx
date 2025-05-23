@@ -104,7 +104,9 @@ const Footer: React.FC = () => {
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#A6292E] text-white mr-3">
                   <Phone size={14} />
                 </div>
-                <span>{t('footer.phone')}</span>
+                <a href={`https://wa.me/+16479493768`} target="_blank" rel="noopener noreferrer" className="hover:text-[#A6292E] transition-colors">
+                  <span>{t('footer.phone')}</span>
+                </a>
               </div>
               <div className="flex items-center text-black">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#A6292E] text-white mr-3">

@@ -3,116 +3,129 @@ import Section from '../components/ui/Section';
 import { Card, CardContent } from '../components/ui/Card';
 import { Check } from 'lucide-react';
 import Button from '../components/ui/Button';
+import tradingImg from '../../public/trading and distribution.png'
+import hospitalityImg from '../../public/hospitality.png'
+import automotiveImg from '../../public/Automotive.png'
+import realEstateImg from '../../public/real estate and property management.png'
+import logisticsImg from '../../public/logistics and transportation.png'
+import financialServicesImg from '../../public/financial services.png'
+import posImg from '../../public/POS (2).png';
+import manifacturing from '../../public/manifacturing.png';
+import constructionImg from '../../public/construction.png';
+import healthcareImg from '../../public/healthcare.png';
+import { useLocalization } from '../hooks/useLocalization';
 
 const IndustrySolutions: React.FC = () => {
+  const { t } = useLocalization();
+
   const industries = [
     {
-      title: 'Retail & POS',
+      title: t('industry.retail.title'),
       features: [
-        'Inventory Management',
-        'Point of Sale',
-        'Customer Loyalty',
-        'Multi-store Operations'
+        t('industry.retail.feature1'),
+        t('industry.retail.feature2'),
+        t('industry.retail.feature3'),
+        t('industry.retail.feature4')
       ],
-      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: posImg
     },
     {
-      title: 'Manufacturing',
+      title: t('industry.manufacturing.title'),
       features: [
-        'Production Planning',
-        'Quality Control',
-        'Material Requirements',
-        'Cost Management'
+        t('industry.manufacturing.feature1'),
+        t('industry.manufacturing.feature2'),
+        t('industry.manufacturing.feature3'),
+        t('industry.manufacturing.feature4')
       ],
-      image: 'https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: manifacturing
     },
     {
-      title: 'Construction',
+      title: t('industry.construction.title'),
       features: [
-        'Project Management',
-        'Resource Planning',
-        'Contract Management',
-        'Site Operations'
+        t('industry.construction.feature1'),
+        t('industry.construction.feature2'),
+        t('industry.construction.feature3'),
+        t('industry.construction.feature4')
       ],
-      image: 'https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: constructionImg
     },
     {
-      title: 'Healthcare',
+      title: t('industry.healthcare.title'),
       features: [
-        'Patient Management',
-        'Appointment Scheduling',
-        'Inventory Control',
-        'Billing & Insurance'
+        t('industry.healthcare.feature1'),
+        t('industry.healthcare.feature2'),
+        t('industry.healthcare.feature3'),
+        t('industry.healthcare.feature4')
       ],
-      image: 'https://images.pexels.com/photos/1170979/pexels-photo-1170979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: healthcareImg
     },
     {
-      title: 'Trading and Distribution',
+      title: t('industry.trading.title'),
       features: [
-        'Inventory Management',
-        'Point of Sale',
-        'Customer Loyalty',
-        'Multi-store Operations'
+        t('industry.trading.feature1'),
+        t('industry.trading.feature2'),
+        t('industry.trading.feature3'),
+        t('industry.trading.feature4')
       ],
-      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: tradingImg
     },
     {
-      title: 'Hospitality and Restaurants',
+      title: t('industry.hospitality.title'),
       features: [
-        'Inventory Management',
-        'Point of Sale',
-        'Customer Loyalty',
-        'Multi-store Operations'
+        t('industry.hospitality.feature1'),
+        t('industry.hospitality.feature2'),
+        t('industry.hospitality.feature3'),
+        t('industry.hospitality.feature4')
       ],
-      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: hospitalityImg
     },
     {
-      title: 'Automotive and Workshop Services',
+      title: t('industry.automotive.title'),
       features: [
-        'Inventory Management',
-        'Point of Sale',
-        'Customer Loyalty',
-        'Multi-store Operations'
+        t('industry.automotive.feature1'),
+        t('industry.automotive.feature2'),
+        t('industry.automotive.feature3'),
+        t('industry.automotive.feature4')
       ],
-      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: automotiveImg
     },
     {
-      title: 'Real Estate and Property Management',
+      title: t('industry.realestate.title'),
       features: [
-        'Inventory Management',
-        'Point of Sale',
-        'Customer Loyalty',
-        'Multi-store Operations'
+        t('industry.realestate.feature1'),
+        t('industry.realestate.feature2'),
+        t('industry.realestate.feature3'),
+        t('industry.realestate.feature4')
       ],
-      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: realEstateImg
     },
     {
-      title: 'Logistics and Transportation',
+      title: t('industry.logistics.title'),
       features: [
-        'Inventory Management',
-        'Point of Sale',
-        'Customer Loyalty',
-        'Multi-store Operations'
+        t('industry.logistics.feature1'),
+        t('industry.logistics.feature2'),
+        t('industry.logistics.feature3'),
+        t('industry.logistics.feature4')
       ],
-      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: logisticsImg
     },
     {
-      title: 'Financial Services',
+      title: t('industry.financial.title'),
       features: [
-        'Inventory Management',
-        'Point of Sale',
-        'Customer Loyalty',
-        'Multi-store Operations'
+        t('industry.financial.feature1'),
+        t('industry.financial.feature2'),
+        t('industry.financial.feature3'),
+        t('industry.financial.feature4')
       ],
-      image: 'https://images.pexels.com/photos/264507/pexels-photo-264507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      image: financialServicesImg
     }
   ];
 
   return (
     <Section
       id="industries"
-      title="Industry Solutions"
-      subtitle="Tailored ERP solutions designed for your specific industry needs"
+      title={t('industry.title')}
+      subtitle={t('industry.subtitle')}
       centered
       className="bg-slate-50"
     >
@@ -144,7 +157,7 @@ const IndustrySolutions: React.FC = () => {
                   ))}
                 </ul>
                 <Button variant="outline" className="w-full mt-6">
-                  Learn More
+                  {t('button.learnMore')}
                 </Button>
               </CardContent>
             </Card>

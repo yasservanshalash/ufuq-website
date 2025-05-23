@@ -5,6 +5,10 @@ import Button from '../components/ui/Button';
 import { Check, ArrowRight, ArrowLeft, Scale, HeadphonesIcon, RefreshCw } from 'lucide-react';
 import img from "../sadu.png"
 import bcorImg from "../bcor.png"
+import posImg from "../../public/pos.png"
+import financeImg from "../../public/bcor finance.png"
+import hcmImg from "../../public/hcm.png"
+import erpImg from "../../public/erp.png"
 import { useLocalization } from '../hooks/useLocalization';
 import { useNavigate } from 'react-router-dom';
 
@@ -62,9 +66,47 @@ const ProductsPage: React.FC = () => {
         t('products.feature.supplyChain'),
         // t('products.feature.businessIntelligence'),
       ],
-      image: 'https://us.images.westend61.de/0001876358pw/group-of-middle-eastern-corporate-business-people-wearing-traditional-emirati-clothes-meeting-in-the-office-in-dubai-business-team-working-and-brainstorming-in-the-uae-DMDF02237.jpg'
-    }
-  ];
+      image: erpImg
+    },
+    {
+      name: t('BCor POS'),
+      description: t('Smart Point of Sale system for modern retailers'),
+      features: [
+        t('Fast, user-friendly interface'),
+        t('Real-time inventory synchronization'),
+        t('Multi-store and multi-terminal support'),
+        t('Integrated with accounting and CRM'),
+        t('Works online and offline'),
+      ],
+      image: posImg
+      // image: 'https://us.images.westend61.de/0001876358pw/group-of-middle-eastern-corporate-business-people-wearing-traditional-emirati-clothes-meeting-in-the-office-in-dubai-business-team-working-and-brainstorming-in-the-uae-DMDF02237.jpg'
+    },
+    {
+      name: t('BCor Finance'),
+      description: t('Comprehensive financial management made simple'),
+      features: [
+        t('Automated journal entries and reporting'),
+        t('Budgeting, forecasting & cash flow insights'),
+        t('Multi-currency support'),
+        t('VAT-ready for GCC compliance'),
+        t('Integrated with all core modules'),
+      ],
+      image: financeImg
+      // image: 'https://us.images.westend61.de/0001876358pw/group-of-middle-eastern-corporate-business-people-wearing-traditional-emirati-clothes-meeting-in-the-office-in-dubai-business-team-working-and-brainstorming-in-the-uae-DMDF02237.jpg'
+    },
+    {
+      name: t('BCor HCM'),
+      description: t('Streamlined Human Capital Management'),
+      features: [
+        t('Onboarding workflows'),
+        t('Payroll, attendance, and leave tracking'),
+        t('Employee self-service portal'),
+        t('Performance reviews and KPIs'),
+        t('Compliant with local labor laws'),
+      ],
+      image: hcmImg
+      // image: 'https://us.images.westend61.de/0001876358pw/group-of-middle-eastern-corporate-business-people-wearing-traditional-emirati-clothes-meeting-in-the-office-in-dubai-business-team-working-and-brainstorming-in-the-uae-DMDF02237.jpg'
+    }  ];
 
   return (
     <>
@@ -103,7 +145,23 @@ const ProductsPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex space-x-4">
+
+                </div>
+                <div className="relative h-[400px] lg:h-auto">
+                  { product.image && (
+                    <img
+                    src={product.image}
+                    alt={product.name}
+                    className="m-auto rounded-lg mt-[50px] inset-0 w-[300px] h-[300px] object-cover"
+                  />
+                  )}
+                </div>
+              </div>
+            </Card>
+          </div>
+        ))}
+      </Section>
+      <div className="flex space-x-4" style={{ margin: '0 auto', width: 'fit-content', marginBottom: '100px' }}>
                     <Button className="group" onClick={navigateToHomeModules}>
                       {isRTL ? 'الخصائص' : 'View All Modules'}
                       {
@@ -111,20 +169,6 @@ const ProductsPage: React.FC = () => {
                       }
                     </Button>
                   </div>
-                </div>
-                <div className="relative h-[400px] lg:h-auto">
-                  <img
-                    src={bcorImg}
-                    alt={product.name}
-                    className="m-auto mt-[50px] inset-0 w-[300px] h-[300px] object-cover"
-                  />
-                </div>
-              </div>
-            </Card>
-          </div>
-        ))}
-      </Section>
-
       <Section className="bg-slate-50" id="modules">
         <div className="text-center">
           <div className="flex justify-center">
