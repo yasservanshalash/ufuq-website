@@ -303,6 +303,31 @@ const enTranslations: Record<string, string> = {
   'cta.description': 'Join thousands of businesses that have streamlined their operations and accelerated growth with Ufuq ERP.',
   'cta.button.start': 'Get Started Today',
   'cta.button.contact': 'Contact Sales',
+
+  // Products
+  'products.bcorPos': 'BCor POS',
+  'products.bcorPos.description': 'Smart Point of Sale system for modern retailers',
+  'products.bcorPos.feature1': 'Fast, user-friendly interface',
+  'products.bcorPos.feature2': 'Real-time inventory synchronization',
+  'products.bcorPos.feature3': 'Multi-store and multi-terminal support',
+  'products.bcorPos.feature4': 'Integrated with accounting and CRM',
+  'products.bcorPos.feature5': 'Works online and offline',
+
+  'products.bcorFinance': 'BCor Finance',
+  'products.bcorFinance.description': 'Comprehensive financial management made simple',
+  'products.bcorFinance.feature1': 'Automated journal entries and reporting',
+  'products.bcorFinance.feature2': 'Budgeting, forecasting & cash flow insights',
+  'products.bcorFinance.feature3': 'Multi-currency support',
+  'products.bcorFinance.feature4': 'VAT-ready for GCC compliance',
+  'products.bcorFinance.feature5': 'Integrated with all core modules',
+
+  'products.bcorHcm': 'BCor HCM',
+  'products.bcorHcm.description': 'Streamlined Human Capital Management',
+  'products.bcorHcm.feature1': 'Onboarding workflows',
+  'products.bcorHcm.feature2': 'Payroll, attendance, and leave tracking',
+  'products.bcorHcm.feature3': 'Employee self-service portal',
+  'products.bcorHcm.feature4': 'Performance reviews and KPIs',
+  'products.bcorHcm.feature5': 'Compliant with local labor laws',
 };
 
 // Arabic translations
@@ -477,24 +502,40 @@ const arTranslations: Record<string, string> = {
   'contact.map.subtitle': 'Visit our office to learn more about our solutions',
   
   // Implementation Page
-  'implementation.title': 'Implementation Process',
-  'implementation.subtitle': 'Our comprehensive approach ensures a successful ERP implementation tailored to your business needs',
-  'implementation.stages.title': 'Bcor ERP Implementation Stages',
-  'implementation.stages.subtitle': 'Our proven implementation methodology ensures a successful transition to your new ERP system',
-  'implementation.stages.discovery.title': 'Discovery & Planning',
-  'implementation.stages.discovery.description': 'This stage focuses on analyzing organizational needs and defining project goals.',
-  'implementation.stages.design.title': 'Design',
-  'implementation.stages.design.description': 'Defines the system\'s architecture, modules, and interface based on planning requirements.',
-  'implementation.stages.development.title': 'Development',
-  'implementation.stages.development.description': 'The ERP system is built, customized, and integrated, including coding and database setup.',
-  'implementation.stages.testing.title': 'Testing',
-  'implementation.stages.testing.description': 'Extensive testing ensures the system works as intended, covering all key functions.',
-  'implementation.stages.deployment.title': 'Deployment',
-  'implementation.stages.deployment.description': 'Deployment includes system installation, data migration, and user training for a smooth transition.',
-  'implementation.stages.support.title': 'Support & Updates',
-  'implementation.stages.support.description': 'Ongoing support includes issue resolution, user assistance, and regular updates to meet evolving needs.',
-  'implementation.approach.title': 'Our Implementation Approach',
-  'implementation.approach.subtitle': 'We prioritize your business needs and ensure a smooth transition with minimal disruption',
+  'implementation.title': 'عملية التنفيذ',
+  'implementation.subtitle': 'نهجنا الشامل يضمن تنفيذاً ناجحاً لنظام تخطيط موارد المؤسسات بما يتناسب مع احتياجات عملك',
+  'implementation.stages.title': 'مراحل تنفيذ نظام بكور',
+  'implementation.stages.subtitle': 'منهجيتنا المثبتة في التنفيذ تضمن انتقالاً ناجحاً إلى نظام تخطيط موارد المؤسسات الجديد',
+  
+  'implementation.stages.discovery.title': 'الاكتشاف والتخطيط',
+  'implementation.stages.discovery.description': 'تركز هذه المرحلة على تحليل احتياجات المؤسسة وتحديد أهداف المشروع',
+  
+  'implementation.stages.design.title': 'التصميم',
+  'implementation.stages.design.description': 'تحديد هيكلية النظام والوحدات والواجهة بناءً على متطلبات التخطيط',
+  
+  'implementation.stages.development.title': 'التطوير',
+  'implementation.stages.development.description': 'يتم بناء نظام تخطيط موارد المؤسسات وتخصيصه وتكامله، بما في ذلك البرمجة وإعداد قاعدة البيانات',
+  
+  'implementation.stages.testing.title': 'الاختبار',
+  'implementation.stages.testing.description': 'اختبارات شاملة تضمن عمل النظام كما هو مخطط له، وتغطي جميع الوظائف الرئيسية',
+  
+  'implementation.stages.deployment.title': 'التشغيل',
+  'implementation.stages.deployment.description': 'يشمل التشغيل تثبيت النظام وترحيل البيانات وتدريب المستخدمين للانتقال السلس',
+  
+  'implementation.stages.support.title': 'الدعم والتحديثات',
+  'implementation.stages.support.description': 'يشمل الدعم المستمر حل المشكلات ومساعدة المستخدمين والتحديثات المنتظمة لتلبية الاحتياجات المتطورة',
+  
+  'implementation.approach.title': 'نهجنا في التنفيذ',
+  'implementation.approach.subtitle': 'نعطي الأولوية لاحتياجات عملك ونضمن انتقالاً سلساً مع الحد الأدنى من التعطيل',
+
+  'implementation.approach.tailored.title': 'حلول مخصصة',
+  'implementation.approach.tailored.description': 'كل تنفيذ مصمم خصيصاً لمتطلبات عملك المحددة واحتياجات صناعتك',
+  
+  'implementation.approach.expert.title': 'توجيه الخبراء',
+  'implementation.approach.expert.description': 'يقدم فريقنا المتمرس دعماً مستمراً طوال رحلة التنفيذ بأكملها',
+  
+  'implementation.approach.minimal.title': 'الحد الأدنى من التعطيل',
+  'implementation.approach.minimal.description': 'نضمن استمرار عمليات عملك بسلاسة أثناء الانتقال إلى النظام الجديد',
 
   // Industry Solutions
   'industry.title': 'حلول الصناعات',
@@ -598,6 +639,31 @@ const arTranslations: Record<string, string> = {
   'cta.description': 'انضم إلى آلاف الشركات التي قامت بتبسيط عملياتها وتسريع نموها مع نظام أفق لتخطيط موارد المؤسسات.',
   'cta.button.start': 'ابدأ اليوم',
   'cta.button.contact': 'اتصل بالمبيعات',
+
+  // Products
+  'products.bcorPos': 'بكور لنقاط البيع',
+  'products.bcorPos.description': 'نظام نقاط البيع الذكي للتجار العصريين',
+  'products.bcorPos.feature1': 'واجهة سريعة وسهلة الاستخدام',
+  'products.bcorPos.feature2': 'مزامنة المخزون في الوقت الفعلي',
+  'products.bcorPos.feature3': 'دعم متعدد المتاجر ونقاط البيع',
+  'products.bcorPos.feature4': 'متكامل مع المحاسبة وإدارة علاقات العملاء',
+  'products.bcorPos.feature5': 'يعمل متصلاً وغير متصل بالإنترنت',
+
+  'products.bcorFinance': 'بكور للمالية',
+  'products.bcorFinance.description': 'إدارة مالية شاملة بشكل مبسط',
+  'products.bcorFinance.feature1': 'قيود يومية وتقارير آلية',
+  'products.bcorFinance.feature2': 'الميزانية والتنبؤ ورؤى التدفق النقدي',
+  'products.bcorFinance.feature3': 'دعم العملات المتعددة',
+  'products.bcorFinance.feature4': 'جاهز لضريبة القيمة المضافة في دول مجلس التعاون الخليجي',
+  'products.bcorFinance.feature5': 'متكامل مع جميع الوحدات الأساسية',
+
+  'products.bcorHcm': 'بكور لإدارة رأس المال البشري',
+  'products.bcorHcm.description': 'إدارة مبسطة لرأس المال البشري',
+  'products.bcorHcm.feature1': 'سير عمل التوظيف',
+  'products.bcorHcm.feature2': 'الرواتب والحضور وتتبع الإجازات',
+  'products.bcorHcm.feature3': 'بوابة الخدمة الذاتية للموظفين',
+  'products.bcorHcm.feature4': 'مراجعات الأداء ومؤشرات الأداء الرئيسية',
+  'products.bcorHcm.feature5': 'متوافق مع قوانين العمل المحلية',
 };
 
 interface LocalizationProviderProps {

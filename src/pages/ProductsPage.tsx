@@ -69,43 +69,40 @@ const ProductsPage: React.FC = () => {
       image: erpImg
     },
     {
-      name: t('BCor POS'),
-      description: t('Smart Point of Sale system for modern retailers'),
+      name: t('products.bcorPos'),
+      description: t('products.bcorPos.description'),
       features: [
-        t('Fast, user-friendly interface'),
-        t('Real-time inventory synchronization'),
-        t('Multi-store and multi-terminal support'),
-        t('Integrated with accounting and CRM'),
-        t('Works online and offline'),
+        t('products.bcorPos.feature1'),
+        t('products.bcorPos.feature2'),
+        t('products.bcorPos.feature3'),
+        t('products.bcorPos.feature4'),
+        t('products.bcorPos.feature5'),
       ],
       image: posImg
-      // image: 'https://us.images.westend61.de/0001876358pw/group-of-middle-eastern-corporate-business-people-wearing-traditional-emirati-clothes-meeting-in-the-office-in-dubai-business-team-working-and-brainstorming-in-the-uae-DMDF02237.jpg'
     },
     {
-      name: t('BCor Finance'),
-      description: t('Comprehensive financial management made simple'),
+      name: t('products.bcorFinance'),
+      description: t('products.bcorFinance.description'),
       features: [
-        t('Automated journal entries and reporting'),
-        t('Budgeting, forecasting & cash flow insights'),
-        t('Multi-currency support'),
-        t('VAT-ready for GCC compliance'),
-        t('Integrated with all core modules'),
+        t('products.bcorFinance.feature1'),
+        t('products.bcorFinance.feature2'),
+        t('products.bcorFinance.feature3'),
+        t('products.bcorFinance.feature4'),
+        t('products.bcorFinance.feature5'),
       ],
       image: financeImg
-      // image: 'https://us.images.westend61.de/0001876358pw/group-of-middle-eastern-corporate-business-people-wearing-traditional-emirati-clothes-meeting-in-the-office-in-dubai-business-team-working-and-brainstorming-in-the-uae-DMDF02237.jpg'
     },
     {
-      name: t('BCor HCM'),
-      description: t('Streamlined Human Capital Management'),
+      name: t('products.bcorHcm'),
+      description: t('products.bcorHcm.description'),
       features: [
-        t('Onboarding workflows'),
-        t('Payroll, attendance, and leave tracking'),
-        t('Employee self-service portal'),
-        t('Performance reviews and KPIs'),
-        t('Compliant with local labor laws'),
+        t('products.bcorHcm.feature1'),
+        t('products.bcorHcm.feature2'),
+        t('products.bcorHcm.feature3'),
+        t('products.bcorHcm.feature4'),
+        t('products.bcorHcm.feature5'),
       ],
       image: hcmImg
-      // image: 'https://us.images.westend61.de/0001876358pw/group-of-middle-eastern-corporate-business-people-wearing-traditional-emirati-clothes-meeting-in-the-office-in-dubai-business-team-working-and-brainstorming-in-the-uae-DMDF02237.jpg'
     }  ];
 
   return (

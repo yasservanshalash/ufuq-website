@@ -15,12 +15,12 @@ import {
 } from 'lucide-react';
 import { useLocalization } from '../hooks/useLocalization';
 import img from '../sadu.png';
-import imp1 from '/discovery and planning.png';
-import imp2 from '/design.png';
-import imp3 from '/testing.png';
-import imp4 from '/development.png';
-import imp5 from '/support.png';
-import imp6 from '/deployment.png';
+import imp1 from '../assets/images/discovery-and-planning.png';
+import imp2 from '../assets/images/design.png';
+import imp3 from '../assets/images/testing.png';
+import imp4 from '../assets/images/development.png';
+import imp5 from '../assets/images/support.png';
+import imp6 from '../assets/images/deployment.png';
 
 const ImplementationPage: React.FC = () => {
   const { t, isRTL } = useLocalization();
@@ -36,37 +36,43 @@ const ImplementationPage: React.FC = () => {
       id: 'discovery',
       icon: SearchIcon,
       title: t('implementation.stages.discovery.title'),
-      description: t('implementation.stages.discovery.description')
+      description: t('implementation.stages.discovery.description'),
+      image: '/discovery and planning.png'
     },
     {
       id: 'design',
       icon: Lightbulb,
       title: t('implementation.stages.design.title'),
-      description: t('implementation.stages.design.description')
+      description: t('implementation.stages.design.description'),
+      image: '/design.png'
     },
     {
       id: 'development',
       icon: Code,
       title: t('implementation.stages.development.title'),
-      description: t('implementation.stages.development.description')
+      description: t('implementation.stages.development.description'),
+      image: '/development.png'
     },
     {
       id: 'testing',
       icon: TestTube,
       title: t('implementation.stages.testing.title'),
-      description: t('implementation.stages.testing.description')
+      description: t('implementation.stages.testing.description'),
+      image: '/testing.png'
     },
     {
       id: 'deployment',
       icon: Upload,
       title: t('implementation.stages.deployment.title'),
-      description: t('implementation.stages.deployment.description')
+      description: t('implementation.stages.deployment.description'),
+      image: '/deployment.png'
     },
     {
       id: 'support',
       icon: HeartPulse,
       title: t('implementation.stages.support.title'),
-      description: t('implementation.stages.support.description')
+      description: t('implementation.stages.support.description'),
+      image: '/support.png'
     }
   ];
 
@@ -157,33 +163,9 @@ const ImplementationPage: React.FC = () => {
                 
                 {/* Icon or image - full width on mobile, right positioned on desktop */}
                 <div className="w-full md:w-5/12 px-4 md:pl-6 flex justify-center md:justify-start mt-4 md:mt-0">
-                  {stage.id === 'discovery' ? (
+                  {stage.id && (
                     <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
-                      <img src={imp1} alt="Discovery Phase" className="w-full h-auto" />
-                    </div>
-                  ) : stage.id === 'design' ? (
-                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
-                      <img src={imp2} alt="Design Phase" className="w-full h-auto" />
-                    </div>
-                  ) : stage.id === 'testing' ? (
-                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
-                      <img src={imp3} alt="Testing Phase" className="w-full h-auto" />
-                    </div>
-                  ) : stage.id === 'development' ? (
-                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
-                      <img src={imp4} alt="Development Phase" className="w-full h-auto" />
-                    </div>
-                  ) : stage.id === 'deployment' ? (
-                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
-                      <img src={imp6} alt="Deployment Phase" className="w-full h-auto" />
-                    </div>
-                  ) : stage.id === 'support' ? (
-                    <div className="rounded-md overflow-hidden" style={{ maxWidth: '200px' }}>
-                      <img src={imp5} alt="Support Phase" className="w-full h-auto" />
-                    </div>
-                  ) : (
-                    <div className="p-3 rounded-lg text-[#A6292E] bg-white shadow-md">
-                      <stage.icon size={28} />
+                      <img src={stage.image} alt={`${stage.title} Phase`} className="w-full h-auto" />
                     </div>
                   )}
                 </div>
@@ -208,8 +190,8 @@ const ImplementationPage: React.FC = () => {
                 <Settings size={24} />
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-[#A6292E] mb-3">Tailored Solutions</h3>
-            <p className="text-gray-700">Every implementation is customized to your specific business requirements and industry needs.</p>
+            <h3 className="text-xl font-semibold text-[#A6292E] mb-3">{t('implementation.approach.tailored.title')}</h3>
+            <p className="text-gray-700">{t('implementation.approach.tailored.description')}</p>
           </Card>
           
           <Card className="p-6 hover:shadow-lg transition-all duration-300">
@@ -218,8 +200,8 @@ const ImplementationPage: React.FC = () => {
                 <UserCheck size={24} />
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-[#A6292E] mb-3">Expert Guidance</h3>
-            <p className="text-gray-700">Our experienced team provides continuous support throughout the entire implementation journey.</p>
+            <h3 className="text-xl font-semibold text-[#A6292E] mb-3">{t('implementation.approach.expert.title')}</h3>
+            <p className="text-gray-700">{t('implementation.approach.expert.description')}</p>
           </Card>
           
           <Card className="p-6 hover:shadow-lg transition-all duration-300">
@@ -228,8 +210,8 @@ const ImplementationPage: React.FC = () => {
                 <BarChart3 size={24} />
               </div>
             </div>
-            <h3 className="text-xl font-semibold text-[#A6292E] mb-3">Minimal Disruption</h3>
-            <p className="text-gray-700">We ensure your business operations continue smoothly during the transition to the new system.</p>
+            <h3 className="text-xl font-semibold text-[#A6292E] mb-3">{t('implementation.approach.minimal.title')}</h3>
+            <p className="text-gray-700">{t('implementation.approach.minimal.description')}</p>
           </Card>
         </div>
       </Section>
