@@ -6,8 +6,9 @@ import { Award, Target, Users, Clock, Lightbulb, Star, Handshake, Zap, Share2, L
 import { useLocalization } from '../hooks/useLocalization';
 import img from '../sadu.png';
 import logo from '../logo_final-3.png';
+
 const AboutPage: React.FC = () => {
-  const { t } = useLocalization();
+  const { t, isRTL } = useLocalization();
 
   useEffect(() => {
     document.title = 'About Us | Ufuq ERP';
@@ -65,79 +66,163 @@ const AboutPage: React.FC = () => {
       {/* <TeamSection /> */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <Section className="bg-slate-50">
-          <div className="h-full flex flex-col">
-            <h2 className="text-3xl font-bold text-[#A6292E] mb-6">{t('about.vision.title')}</h2>
-            <p className="text-lg text-gray-700 mb-8">
-              {t('about.vision.description')}
-            </p>
-            <div className="grid grid-cols-1 gap-6 flex-grow">
-              <Card className="p-6 h-full h-[220px]">
-                <div className="flex mb-4">
-                  <div className="p-3 rounded-lg text-[#A6292E]">
-                    <Lightbulb size={24} />
-                  </div>
+          {isRTL ? (
+            // Arabic Layout
+            <div style={{ direction: 'rtl' }} className="h-full">
+              <div className="flex flex-col items-end w-full">
+                <h2 className="text-3xl font-bold text-[#A6292E] mb-6 w-full">{t('about.vision.title')}</h2>
+                <p className="text-lg text-gray-700 mb-8 w-full text-right">
+                  {t('about.vision.description')}
+                </p>
+                <div className="w-full space-y-6">
+                  <Card className="p-6 w-full">
+                    <div className="flex flex-col items-end">
+                      <div className="p-3 rounded-lg text-[#A6292E] mb-4">
+                        <Lightbulb size={24} />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3 w-full">{t('about.values.innovation')}</h3>
+                      <p className="text-gray-600 w-full">{t('about.values.innovation.desc')}</p>
+                    </div>
+                  </Card>
+                  <Card className="p-6 w-full">
+                    <div className="flex flex-col items-end">
+                      <div className="p-3 rounded-lg text-[#A6292E] mb-4">
+                        <Star size={24} />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3 w-full">{t('about.values.excellence')}</h3>
+                      <p className="text-gray-600 w-full">{t('about.values.excellence.desc')}</p>
+                    </div>
+                  </Card>
+                  <Card className="p-6 w-full">
+                    <div className="flex flex-col items-end">
+                      <div className="p-3 rounded-lg text-[#A6292E] mb-4">
+                        <Handshake size={24} />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3 w-full">{t('about.values.partnership')}</h3>
+                      <p className="text-gray-600 w-full">{t('about.values.partnership.desc')}</p>
+                    </div>
+                  </Card>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{t('about.values.innovation')}</h3>
-                <p className="text-gray-600">{t('about.values.innovation.desc')}</p>
-              </Card>
-              <Card className="p-6 h-full h-[220px]">
-                <div className="flex mb-4">
-                  <div className="p-3 rounded-lg text-[#A6292E]">
-                    <Star size={24} />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{t('about.values.excellence')}</h3>
-                <p className="text-gray-600">{t('about.values.excellence.desc')}</p>
-              </Card>
-              <Card className="p-6 h-full h-[220px]">
-                <div className="flex mb-4">
-                  <div className="p-3 rounded-lg text-[#A6292E]">
-                    <Handshake size={24} />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{t('about.values.partnership')}</h3>
-                <p className="text-gray-600">{t('about.values.partnership.desc')}</p>
-              </Card>
+              </div>
             </div>
-          </div>
+          ) : (
+            // English Layout
+            <div className="h-full flex flex-col">
+              <h2 className="text-3xl font-bold text-[#A6292E] mb-6">{t('about.vision.title')}</h2>
+              <p className="text-lg text-gray-700 mb-8">
+                {t('about.vision.description')}
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card className="p-6 flex flex-col h-full">
+                  <div className="flex mb-4">
+                    <div className="p-3 rounded-lg text-[#A6292E]">
+                      <Lightbulb size={24} />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{t('about.values.innovation')}</h3>
+                  <p className="text-gray-600">{t('about.values.innovation.desc')}</p>
+                </Card>
+                <Card className="p-6 flex flex-col h-full">
+                  <div className="flex mb-4">
+                    <div className="p-3 rounded-lg text-[#A6292E]">
+                      <Star size={24} />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{t('about.values.excellence')}</h3>
+                  <p className="text-gray-600">{t('about.values.excellence.desc')}</p>
+                </Card>
+                <Card className="p-6 flex flex-col h-full">
+                  <div className="flex mb-4">
+                    <div className="p-3 rounded-lg text-[#A6292E]">
+                      <Handshake size={24} />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{t('about.values.partnership')}</h3>
+                  <p className="text-gray-600">{t('about.values.partnership.desc')}</p>
+                </Card>
+              </div>
+            </div>
+          )}
         </Section>
 
         <Section className="bg-slate-50">
-          <div className="h-full flex flex-col">
-            <h2 className="text-3xl font-bold text-[#A6292E] mb-6">{t('about.mission.title')}</h2>
-            <p className="text-lg text-gray-700 mb-8">
-              {t('about.mission.description')}
-            </p>
-            <div className="grid grid-cols-1 gap-6 flex-grow">
-              <Card className="p-6 h-full h-[220px]">
-                <div className="flex mb-4">
-                  <div className="p-3 rounded-lg text-[#A6292E]">
-                    <Zap size={24} />
-                  </div>
+          {isRTL ? (
+            // Arabic Layout
+            <div style={{ direction: 'rtl' }} className="h-full">
+              <div className="flex flex-col items-end w-full">
+                <h2 className="text-3xl font-bold text-[#A6292E] mb-6 w-full">{t('about.mission.title')}</h2>
+                <p className="text-lg text-gray-700 mb-8 w-full">
+                  {t('about.mission.description')}
+                </p>
+                <div className="w-full space-y-6">
+                  <Card className="p-6 w-full">
+                    <div className="flex flex-col items-end">
+                      <div className="p-3 rounded-lg text-[#A6292E] mb-4">
+                        <Zap size={24} />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3 w-full">{t('about.mission.empowerment')}</h3>
+                      <p className="text-gray-600 w-full">{t('about.mission.empowerment.desc')}</p>
+                    </div>
+                  </Card>
+                  <Card className="p-6 w-full">
+                    <div className="flex flex-col items-end">
+                      <div className="p-3 rounded-lg text-[#A6292E] mb-4">
+                        <Share2 size={24} />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3 w-full">{t('about.mission.integration')}</h3>
+                      <p className="text-gray-600 w-full">{t('about.mission.integration.desc')}</p>
+                    </div>
+                  </Card>
+                  <Card className="p-6 w-full">
+                    <div className="flex flex-col items-end">
+                      <div className="p-3 rounded-lg text-[#A6292E] mb-4">
+                        <Lock size={24} />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-3 w-full">{t('about.mission.accessibility')}</h3>
+                      <p className="text-gray-600 w-full">{t('about.mission.accessibility.desc')}</p>
+                    </div>
+                  </Card>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{t('about.mission.empowerment')}</h3>
-                <p className="text-gray-600">{t('about.mission.empowerment.desc')}</p>
-              </Card>
-              <Card className="p-6 h-full h-[220px]">
-                <div className="flex mb-4">
-                  <div className="p-3 rounded-lg text-[#A6292E]">
-                    <Share2 size={24} />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{t('about.mission.integration')}</h3>
-                <p className="text-gray-600">{t('about.mission.integration.desc')}</p>
-              </Card>
-              <Card className="p-6 h-full h-[220px]">
-                <div className="flex mb-4">
-                  <div className="p-3 rounded-lg text-[#A6292E]">
-                    <Lock size={24} />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{t('about.mission.accessibility')}</h3>
-                <p className="text-gray-600">{t('about.mission.accessibility.desc')}</p>
-              </Card>
+              </div>
             </div>
-          </div>
+          ) : (
+            // English Layout
+            <div className="h-full flex flex-col">
+              <h2 className="text-3xl font-bold text-[#A6292E] mb-6">{t('about.mission.title')}</h2>
+              <p className="text-lg text-gray-700 mb-8">
+                {t('about.mission.description')}
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card className="p-6 flex flex-col h-full">
+                  <div className="flex mb-4">
+                    <div className="p-3 rounded-lg text-[#A6292E]">
+                      <Zap size={24} />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{t('about.mission.empowerment')}</h3>
+                  <p className="text-gray-600">{t('about.mission.empowerment.desc')}</p>
+                </Card>
+                <Card className="p-6 flex flex-col h-full">
+                  <div className="flex mb-4">
+                    <div className="p-3 rounded-lg text-[#A6292E]">
+                      <Share2 size={24} />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{t('about.mission.integration')}</h3>
+                  <p className="text-gray-600">{t('about.mission.integration.desc')}</p>
+                </Card>
+                <Card className="p-6 flex flex-col h-full">
+                  <div className="flex mb-4">
+                    <div className="p-3 rounded-lg text-[#A6292E]">
+                      <Lock size={24} />
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{t('about.mission.accessibility')}</h3>
+                  <p className="text-gray-600">{t('about.mission.accessibility.desc')}</p>
+                </Card>
+              </div>
+            </div>
+          )}
         </Section>
       </div>
     </>

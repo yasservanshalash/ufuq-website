@@ -116,7 +116,7 @@ const enTranslations: Record<string, string> = {
   'footer.resources.blog': 'Blog',
   'footer.resources.casestudies': 'Case Studies',
   'footer.companyDescription': 'Transforming businesses with integrated enterprise solutions. We help companies streamline operations and drive growth through innovative ERP technology.',
-  'footer.phone': '+1 (555) 123-4567',
+  'footer.phone': '+973 3981-3811',
   'footer.email': 'contact@ufuqerp.com',
   'footer.address': '1234 Technology Plaza, Suite 500, San Francisco, CA 94107',
   'footer.copyright': '© {year} Ufuq Technologies Inc. All rights reserved.',
@@ -129,10 +129,10 @@ const enTranslations: Record<string, string> = {
   'about.story.paragraph2': 'As the official reseller of BCor, Ufuq focuses on making powerful ERP capabilities accessible without the cost and complexity that typically come with large scale systems. We don\'t develop ERP we deliver it with precision, local insight, and hands on support.',
   'about.story.paragraph3': 'BCor offers integrated modules for finance, HR, inventory, sales, CRM, and more built to streamline operations and help growing businesses stay competitive in a digital first economy.',
   'about.story.paragraph4': 'At Ufuq, we believe progress doesn\'t have to come at the cost of identity. That\'s why we take pride in blending modern technology with deep respect for the region\'s business values, traditions, and cultural context. From the way we communicate, to how we support our clients we align with the values that matter most.',
-  'about.stats.clients': 'Clients Worldwide',
-  'about.stats.experience': 'Years of Experience',
-  'about.stats.awards': 'Industry Awards',
-  'about.stats.success': 'Success Rate',
+  'about.stats.clients': '500+',
+  'about.stats.experience': '15+',
+  'about.stats.awards': '25+',
+  'about.stats.success': '99%',
   'about.vision.title': 'Our Vision',
   'about.vision.description': 'We envision a future where every business, regardless of size, has access to enterprise-grade solutions that drive innovation, efficiency, and sustainable growth.',
   'about.values.innovation': 'Innovation',
@@ -186,6 +186,8 @@ const enTranslations: Record<string, string> = {
   'implementation.subtitle': 'Our comprehensive approach ensures a successful ERP implementation tailored to your business needs',
   'implementation.stages.title': 'Bcor ERP Implementation Stages',
   'implementation.stages.subtitle': 'Our proven implementation methodology ensures a successful transition to your new ERP system',
+  
+  // Implementation Stages
   'implementation.stages.discovery.title': 'Discovery & Planning',
   'implementation.stages.discovery.description': 'This stage focuses on analyzing organizational needs and defining project goals.',
   'implementation.stages.design.title': 'Design',
@@ -198,8 +200,16 @@ const enTranslations: Record<string, string> = {
   'implementation.stages.deployment.description': 'Deployment includes system installation, data migration, and user training for a smooth transition.',
   'implementation.stages.support.title': 'Support & Updates',
   'implementation.stages.support.description': 'Ongoing support includes issue resolution, user assistance, and regular updates to meet evolving needs.',
+  
+  // Implementation Approach
   'implementation.approach.title': 'Our Implementation Approach',
   'implementation.approach.subtitle': 'We prioritize your business needs and ensure a smooth transition with minimal disruption',
+  'implementation.approach.tailored.title': 'Tailored Solutions',
+  'implementation.approach.tailored.description': 'Each implementation is custom-designed to meet your specific business requirements and industry needs',
+  'implementation.approach.expert.title': 'Expert Guidance',
+  'implementation.approach.expert.description': 'Our experienced team provides continuous support throughout your entire implementation journey',
+  'implementation.approach.minimal.title': 'Minimal Disruption',
+  'implementation.approach.minimal.description': 'We ensure your business operations continue smoothly during the transition to the new system',
 
   // Industry Solutions
   'industry.title': 'Industry Solutions',
@@ -328,6 +338,17 @@ const enTranslations: Record<string, string> = {
   'products.bcorHcm.feature3': 'Employee self-service portal',
   'products.bcorHcm.feature4': 'Performance reviews and KPIs',
   'products.bcorHcm.feature5': 'Compliant with local labor laws',
+
+  // Contact Form
+  'getInTouch.form.successMessage': 'Message sent successfully! We\'ll get back to you soon.',
+  'getInTouch.form.errorMessage': 'Failed to send message. Please try again or contact us directly.',
+  'getInTouch.form.sending': 'Sending...',
+  'getInTouch.form.submit': 'Send Message',
+  'getInTouch.form.firstName': 'First Name',
+  'getInTouch.form.lastName': 'Last Name',
+  'getInTouch.form.email': 'Email',
+  'getInTouch.form.company': 'Company',
+  'getInTouch.form.message': 'Message',
 };
 
 // Arabic translations
@@ -440,8 +461,8 @@ const arTranslations: Record<string, string> = {
   'footer.resources.blog': 'المدونة',
   'footer.resources.casestudies': 'دراسات الحالة',
   'footer.companyDescription': 'تحويل الأعمال بحلول مؤسسات متكاملة. نساعد الشركات على تبسيط العمليات ودفع النمو من خلال تكنولوجيا تخطيط موارد المؤسسات المبتكرة.',
-  'footer.phone': '+1 (555) 123-4567',
-  'footer.email': 'contact@ufuqerp.com',
+  'footer.phone': '\u200E+٩٧٣٣٩٨١٣٨١١',
+  'footer.email': 'ufuqerp@gmail.com',
   'footer.address': '1234 تكنولوجي بلازا، جناح 500، سان فرانسيسكو، كاليفورنيا 94107',
   'footer.copyright': '© {year} شركة أفق للتكنولوجيا. جميع الحقوق محفوظة.',
   
@@ -449,14 +470,14 @@ const arTranslations: Record<string, string> = {
   'about.title': 'عن شركة أفق',
   'about.subtitle': 'تحويل الأعمال من خلال حلول مؤسسية مبتكرة منذ عام 2010.',
   'about.story.title': 'قصتنا',
-  'about.story.paragraph1': 'تأسست شركة أفق في عام 2010، وكانت في طليعة الابتكار في مجال تخطيط موارد المؤسسات. مهمتنا هي تمكين الشركات بحلول ذكية وقابلة للتوسع تدفع النمو والكفاءة.',
-  'about.story.paragraph2': 'ما بدأ كفريق صغير من المطورين المتحمسين نما ليصبح مؤسسة عالمية، تخدم مئات الشركات عبر صناعات متعددة.',
-  'about.story.paragraph3': 'يوفر نظام BCor وحدات متكاملة للمالية والموارد البشرية والمخزون والمبيعات وإدارة علاقات العملاء والمزيد، مصممة لتبسيط العمليات ومساعدة الشركات النامية على البقاء تنافسية في اقتصاد رقمي.',
-  'about.story.paragraph4': 'في أفق، نؤمن بأن التقدم لا يجب أن يأتي على حساب الهوية. لهذا نفتخر بدمج التكنولوجيا الحديثة مع احترام عميق لقيم الأعمال والتقاليد والسياق الثقافي للمنطقة. من طريقة تواصلنا، إلى كيفية دعمنا لعملائنا، نحن نتوافق مع القيم التي تهم أكثر.',
-  'about.stats.clients': 'العملاء حول العالم',
-  'about.stats.experience': 'سنوات من الخبرة',
-  'about.stats.awards': 'جوائز الصناعة',
-  'about.stats.success': 'معدل النجاح',
+  'about.story.paragraph1': 'تأسست شركة أفق على يد محمد عادل أوديفاياليل لجلب نظام بكور، وهو برنامج مؤسسي موثوق به تستخدمه البنوك والمصنعين ومقدمي الخدمات في البحرين، إلى الشركات الصغيرة والمتوسطة في جميع أنحاء دول مجلس التعاون الخليجي.',
+  'about.story.paragraph2': 'بصفتنا الموزع الرسمي لنظام بكور، تركز أفق على جعل قدرات نظام تخطيط موارد المؤسسات القوية في متناول الجميع دون التكلفة والتعقيد اللذين يأتيان عادةً مع الأنظمة واسعة النطاق. نحن لا نطور نظام تخطيط موارد المؤسسات، بل نقدمه بدقة ورؤية محلية ودعم عملي.',
+  'about.story.paragraph3': 'يوفر نظام بكور وحدات متكاملة للمالية والموارد البشرية والمخزون والمبيعات وإدارة علاقات العملاء والمزيد، مصممة لتبسيط العمليات ومساعدة الشركات النامية على البقاء تنافسية في اقتصاد رقمي.',
+  'about.story.paragraph4': 'في أفق، نؤمن بأن التقدم لا يجب أن يأتي على حساب الهوية. لهذا نفتخر بدمج التكنولوجيا الحديثة مع احترام عميق لقيم الأعمال والتقاليد والسياق الثقافي للمنطقة. من طريقة تواصلنا إلى كيفية دعمنا لعملائنا، نحن نتوافق مع القيم التي تهم أكثر.',
+  'about.stats.clients': '+٥٠٠',
+  'about.stats.experience': '+١٥',
+  'about.stats.awards': '+٢٥',
+  'about.stats.success': '٩٩٪',
   'about.vision.title': 'رؤيتنا',
   'about.vision.description': 'نتصور مستقبلاً تتمتع فيه كل شركة، بغض النظر عن حجمها، بإمكانية الوصول إلى حلول على مستوى المؤسسات تدفع الابتكار والكفاءة والنمو المستدام.',
   'about.values.innovation': 'الابتكار',
@@ -507,33 +528,27 @@ const arTranslations: Record<string, string> = {
   'implementation.stages.title': 'مراحل تنفيذ نظام بكور',
   'implementation.stages.subtitle': 'منهجيتنا المثبتة في التنفيذ تضمن انتقالاً ناجحاً إلى نظام تخطيط موارد المؤسسات الجديد',
   
+  // Implementation Stages
   'implementation.stages.discovery.title': 'الاكتشاف والتخطيط',
   'implementation.stages.discovery.description': 'تركز هذه المرحلة على تحليل احتياجات المؤسسة وتحديد أهداف المشروع',
-  
   'implementation.stages.design.title': 'التصميم',
   'implementation.stages.design.description': 'تحديد هيكلية النظام والوحدات والواجهة بناءً على متطلبات التخطيط',
-  
   'implementation.stages.development.title': 'التطوير',
   'implementation.stages.development.description': 'يتم بناء نظام تخطيط موارد المؤسسات وتخصيصه وتكامله، بما في ذلك البرمجة وإعداد قاعدة البيانات',
-  
   'implementation.stages.testing.title': 'الاختبار',
   'implementation.stages.testing.description': 'اختبارات شاملة تضمن عمل النظام كما هو مخطط له، وتغطي جميع الوظائف الرئيسية',
-  
   'implementation.stages.deployment.title': 'التشغيل',
   'implementation.stages.deployment.description': 'يشمل التشغيل تثبيت النظام وترحيل البيانات وتدريب المستخدمين للانتقال السلس',
-  
   'implementation.stages.support.title': 'الدعم والتحديثات',
   'implementation.stages.support.description': 'يشمل الدعم المستمر حل المشكلات ومساعدة المستخدمين والتحديثات المنتظمة لتلبية الاحتياجات المتطورة',
   
+  // Implementation Approach
   'implementation.approach.title': 'نهجنا في التنفيذ',
   'implementation.approach.subtitle': 'نعطي الأولوية لاحتياجات عملك ونضمن انتقالاً سلساً مع الحد الأدنى من التعطيل',
-
   'implementation.approach.tailored.title': 'حلول مخصصة',
   'implementation.approach.tailored.description': 'كل تنفيذ مصمم خصيصاً لمتطلبات عملك المحددة واحتياجات صناعتك',
-  
   'implementation.approach.expert.title': 'توجيه الخبراء',
   'implementation.approach.expert.description': 'يقدم فريقنا المتمرس دعماً مستمراً طوال رحلة التنفيذ بأكملها',
-  
   'implementation.approach.minimal.title': 'الحد الأدنى من التعطيل',
   'implementation.approach.minimal.description': 'نضمن استمرار عمليات عملك بسلاسة أثناء الانتقال إلى النظام الجديد',
 
@@ -664,6 +679,17 @@ const arTranslations: Record<string, string> = {
   'products.bcorHcm.feature3': 'بوابة الخدمة الذاتية للموظفين',
   'products.bcorHcm.feature4': 'مراجعات الأداء ومؤشرات الأداء الرئيسية',
   'products.bcorHcm.feature5': 'متوافق مع قوانين العمل المحلية',
+
+  // Contact Form
+  'getInTouch.form.successMessage': 'تم إرسال الرسالة بنجاح! سنعود إليك قريباً.',
+  'getInTouch.form.errorMessage': 'فشل في إرسال الرسالة. يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة.',
+  'getInTouch.form.sending': 'جاري الإرسال...',
+  'getInTouch.form.submit': 'إرسال الرسالة',
+  'getInTouch.form.firstName': 'الاسم الأول',
+  'getInTouch.form.lastName': 'اسم العائلة',
+  'getInTouch.form.email': 'البريد الإلكتروني',
+  'getInTouch.form.company': 'الشركة',
+  'getInTouch.form.message': 'الرسالة',
 };
 
 interface LocalizationProviderProps {

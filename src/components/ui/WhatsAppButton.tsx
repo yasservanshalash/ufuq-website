@@ -1,8 +1,10 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
+import { useLocalization } from '../../hooks/useLocalization';
 
 const WhatsAppButton: React.FC = () => {
-  const phoneNumber = '+16479493768';
+  const { isRTL } = useLocalization();
+  const phoneNumber = '97339813811'; // Remove any formatting for the URL
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (

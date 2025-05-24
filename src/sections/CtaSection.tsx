@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../components/ui/Button';
 import Container from '../components/ui/Container';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { useLocalization } from '../hooks/useLocalization';
 
 const CtaSection: React.FC = () => {
@@ -22,20 +22,28 @@ const CtaSection: React.FC = () => {
               size="lg" 
               className="group"
               style={{ backgroundColor: '#DCD6C9', color: '#A6292E' }}
+              onClick={() => window.open('https://wa.me/97339813811', '_blank')}
             >
               <span>{t('cta.button.start')}</span>
-              <ArrowRight 
-                className={`${isRTL ? 'mr-2 group-hover:-translate-x-1' : 'ml-2 group-hover:translate-x-1'} transition-transform`} 
-                size={18} 
-              />
+              {isRTL ? (
+                <ArrowLeft 
+                  className={`${isRTL ? 'mr-2 group-hover:-translate-x-1' : 'ml-2 group-hover:translate-x-1'} transition-transform`} 
+                  size={18} 
+                />
+              ) : (
+                <ArrowRight 
+                  className={`${isRTL ? 'mr-2 group-hover:-translate-x-1' : 'ml-2 group-hover:translate-x-1'} transition-transform`} 
+                  size={18} 
+                />
+              )}
             </Button>
-            <Button 
+            {/* <Button 
               variant="outline" 
               size="lg" 
               className="text-white border-white hover:bg-white/10 hover:text-white"
             >
               {t('cta.button.contact')}
-            </Button>
+            </Button> */}
           </div>
         </div>
       </Container>

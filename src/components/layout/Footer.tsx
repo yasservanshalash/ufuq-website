@@ -8,7 +8,7 @@ import { useLocalization } from '../../hooks/useLocalization';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  const { t } = useLocalization();
+  const { t, isRTL } = useLocalization();
 
   // Create translated footer navigation items
   const translatedFooterItems = footerNavItems.map(group => {
@@ -62,12 +62,12 @@ const Footer: React.FC = () => {
               {t('footer.companyDescription')}
             </p>
             <div className="flex items-center space-x-4">
-              <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-[#A6292E] text-white hover:bg-primary-800 transition-colors">
+              {/* <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-[#A6292E] text-white hover:bg-primary-800 transition-colors">
                 <Facebook size={18} />
               </a>
               <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-[#A6292E] text-white hover:bg-primary-800 transition-colors">
                 <Twitter size={18} />
-              </a>
+              </a> */}
               <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-[#A6292E] text-white hover:bg-primary-800 transition-colors">
                 <Linkedin size={18} />
               </a>
@@ -100,26 +100,39 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-slate-800">
           <div className="flex flex-col md:flex-row md:justify-between items-center">
             <div className="mb-4 md:mb-0 space-y-3">
-              <div className="flex items-center text-black">
+              <div className="flex items-center gap-2 text-black">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#A6292E] text-white mr-3">
                   <Phone size={14} />
                 </div>
-                <a href={`https://wa.me/+16479493768`} target="_blank" rel="noopener noreferrer" className="hover:text-[#A6292E] transition-colors">
-                  <span>{t('footer.phone')}</span>
+                <a 
+                  href={`https://wa.me/97339813811`} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-[#A6292E] transition-colors"
+                >
+                  <span 
+                    className={`inline-block ${isRTL ? 'text-right' : 'text-left'}`}
+                    style={{ 
+                      direction: isRTL ? 'rtl' : 'ltr',
+                      unicodeBidi: 'plaintext'
+                    }}
+                  >
+                    {t('footer.phone')}
+                  </span>
                 </a>
               </div>
-              <div className="flex items-center text-black">
+              <div className="flex items-center gap-2 text-black">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#A6292E] text-white mr-3">
                   <Mail size={14} />
                 </div>
                 <span>{t('footer.email')}</span>
               </div>
-              <div className="flex items-center text-black">
+              {/* <div className="flex items-center gap-2 text-black">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-[#A6292E] text-white mr-3">
                   <MapPin size={14} />
                 </div>
                 <span>{t('footer.address')}</span>
-              </div>
+              </div> */}
             </div>
             <div className="text-[#A6292E] text-sm">
               {t('footer.copyright').replace('{year}', currentYear.toString())}

@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
       <FeaturesSection />
       <IndustrySolutions />
       {/* <TrustedLeaders /> */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <ContactSection />
       <CtaSection />
     </>
