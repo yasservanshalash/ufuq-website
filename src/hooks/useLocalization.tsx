@@ -349,6 +349,7 @@ const enTranslations: Record<string, string> = {
   'getInTouch.form.email': 'Email',
   'getInTouch.form.company': 'Company',
   'getInTouch.form.message': 'Message',
+  'getInTouch.form.phone': 'Phone',
 };
 
 // Arabic translations
@@ -690,6 +691,7 @@ const arTranslations: Record<string, string> = {
   'getInTouch.form.email': 'البريد الإلكتروني',
   'getInTouch.form.company': 'الشركة',
   'getInTouch.form.message': 'الرسالة',
+  'getInTouch.form.phone': 'رقم الهاتف',
 };
 
 interface LocalizationProviderProps {
